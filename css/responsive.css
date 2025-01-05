@@ -1,0 +1,68 @@
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+    .shape-bottom-left{
+        display: none;
+    }
+    .login-btn{
+        width: 100%;
+    }
+    .guest-box{
+        width: 360px;
+      }
+      .otp-input {
+        width: 50px; 
+        height: 40px; 
+        font-size: 0.9rem; 
+      }
+      .modal-box {
+        max-width: 100%;
+        padding: 15px;
+      }
+    
+    
+      .modal-box h4 {
+        font-size: 1.25rem;
+      }
+    
+      .popup-close-btn {
+        width: 40px;
+        height: 40px;
+      }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .otp-input {
+        width: 60px; 
+        height: 50px; 
+        font-size: 1rem;
+      }
+      .modal-box {
+        max-width: 95%;
+        padding: 20px; /* Adjust padding for smaller screens */
+        min-height: auto; /* Allow flexible height */
+      }
+    
+      .modal-box h4 {
+        font-size: 1.5rem; /* Reduce font size */
+      }
+    
+    
+    
+      .popup-close-btn {
+        width: 50px;
+        height: 50px;
+      }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 991px) {
+    .right-content{
+        flex-basis: 100%;
+    }
+    .left-img{
+        display: none;
+    }
+    .shape-bottom-left{
+        left: -5%;
+        top: 80%;
+    }
+
+}

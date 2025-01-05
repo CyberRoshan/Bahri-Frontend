@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="hero-section h-screen bg-white">
+      <!-- OTP Verification Modal Start -->
+
+      <div
+        class="modal fade"
+        id="verificationModal"
+        tabindex="-1"
+        aria-labelledby="verificationModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div
+            class="modal-content flex-column mx-auto gap-3 py-4 px-4 modal-box text-center bg-white position-relative"
+          >
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              class="popup-close-btn position-absolute end-0 top-0"
+            >
+              <img src="assets/close-icon.svg" alt="Close" />
+            </button>
+            <h4 class="fw-bold" id="verificationModalLabel">Verification</h4>
+            <p>
+              Please enter the verification code sent to your mobile number
+              <span class="fw-bold">(201) 555-0124</span>
+            </p>
+            <form>
+              <div
+                class="d-flex justify-content-center align-items-center gap-2 pb-4 flex-wrap"
+              >
+                <input type="tel" class="form-control otp-input custom-input" />
+                <input type="tel" class="form-control otp-input custom-input" />
+                <input type="tel" class="form-control otp-input custom-input" />
+                <input type="tel" class="form-control otp-input custom-input" />
+              </div>
+
+              <button
+                type="button"
+                class="right-arw-btn login-btn fw-bold mt-2 mb-4 w-100"
+              >
+                Confirm
+              </button>
+              <div class="text-center">
+                <div class="fw-bolder text-black fs-12">
+                  <img src="assets/rotate-left.svg" alt="Resend" /> Resend
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- OTP Verification Modal End -->
+      <!-- Decorative shapes -->
+      <div class="position-absolute top-0 end-0">
+        <img src="assets/blue-circle.svg" alt="" />
+      </div>
+      <div class="shape-bottom-left position-absolute">
+        <img src="assets/yellow-circle.svg" alt="" />
+      </div>
+      <div class="position-absolute bottom-0 end-0">
+        <img src="assets/bottom-right-shape.svg" alt="" />
+      </div>
+
+      <div class="d-flex">
+        <div class="left-img">
+          <img
+            class="position-relative"
+            src="assets/login-img.png"
+            alt="Login"
+          />
+        </div>
+        <div
+          class="right-content login-content py-5 d-flex align-items-center justify-content-center flex-column gap-5"
+        >
+          <div class="text-center text-black">
+            <h3>
+              <span class="fw-bold">Sign in</span> to your <br />
+              Account
+            </h3>
+            <div class="text-black fw-normal">
+              Login with your email address
+            </div>
+            <form>
+              <div class="position-relative py-4">
+                <span class="icon-wrapper">
+                  <img
+                    class="opacity-20"
+                    src="assets/phone-icon.svg"
+                    alt="Enter Mobile Number"
+                  />
+                </span>
+                <input
+                  type="tel"
+                  class="form-control custom-input"
+                  placeholder="Enter Mobile Number"
+                />
+              </div>
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#verificationModal"
+                class="right-arw-btn login-btn fw-bold mt-2 mb-4"
+              >
+                Login
+              </button>
+            </form>
+            <div
+              class="d-flex align-items-center justify-content-center position-relative mb-3"
+            >
+              <div class="line ms-5 my-3"></div>
+              <span class="or-text text-center">OR</span>
+            </div>
+            <div class="d-flex justify-content-center gap-2 mb-3">
+              <button class="social-btn">
+                <img src="assets/G_Logo.svg" alt="Google" />
+              </button>
+              <button class="social-btn">
+                <img src="assets/FB_logo.svg" alt="Facebook" />
+              </button>
+              <button class="social-btn">
+                <img src="assets/apple-logo.svg" alt="Apple" />
+              </button>
+            </div>
+            <p class="text-center register-text text-black pt-3">
+              Don’t have an account? <a href="#">Register Now</a>
+            </p>
+          </div>
+          <div
+            class="guest-box d-flex align-items-center justify-content-between"
+          >
+            <div class="guest-login text-black">
+              <span class="fw-bold">Visit</span> as a Guest
+            </div>
+            <a href="signup.html">
+              <button class="yellow-right-btn">
+                <img src="assets/arrow-left-blue.svg" alt="Guest" />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll(
+          ".verification-input:not(:first-child)"
+        );
+
+        inputs.forEach((input, index) => {
+          input.addEventListener("input", function () {
+            if (this.value.length === 1) {
+              if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+              }
+            }
+          });
+
+          input.addEventListener("keydown", function (e) {
+            if (e.key === "Backspace" && !this.value) {
+              if (index > 0) {
+                inputs[index - 1].focus();
+              }
+            }
+          });
+        });
+
+        document
+          .querySelector(".btn-confirm")
+          .addEventListener("click", function () {
+            let code = "2"; // First digit is always 2
+            inputs.forEach((input) => {
+              code += input.value;
+            });
+            console.log("Verification code:", code);
+          });
+
+        document
+          .querySelector(".resend-text")
+          .addEventListener("click", function () {
+            console.log("Resending verification code...");
+            // Add your resend logic here
+          });
+      });
+    </script>
+  </body>
+</html>
