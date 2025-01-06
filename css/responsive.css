@@ -29,11 +29,11 @@
   .card-style {
     margin-bottom: 20px;
   }
-  
+
   .see-all-btn {
     font-size: 14px;
   }
-  
+
   .h3-heading {
     font-size: 24px;
   }
@@ -96,12 +96,24 @@
   }
   .catering-item {
     height: 320px;
-}
+  }
 
-.catering-price {
+  .catering-price {
     padding: 8px 16px;
-}
+  }
+  .detail-heading {
+    font-size: 28px;
+  }
 
+  .detail-price {
+    font-size: 20px;
+  }
+
+  .availability-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
@@ -127,11 +139,11 @@
   .card-style {
     margin-bottom: 20px;
   }
-  
+
   .see-all-btn {
     font-size: 16px;
   }
-  
+
   .h3-heading {
     font-size: 28px;
   }
@@ -178,45 +190,61 @@
   .banner_2 .deg {
     font-size: 72px;
   }
-}
-
-@media only screen and (min-width: 200px) and (max-width: 991px) {
-  .right-content {
-    flex-basis: 100%;
-  }
-  .left-img {
-    display: none;
-  }
-  .shape-bottom-left {
-    left: -5%;
-    top: 80%;
-  }
-  .img-card {
-    height: 250px;
-  }
-  
-  .img-card h4 {
-    font-size: 32px;
-  }
-  .card-style-2 {
-    margin-bottom: 20px;
-  }
-  .h3-heading {
-    font-size: 24px;
+  .detail-img,
+  .detail-content {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
   }
 
-  .see-all-btn {
-    font-size: 14px;
+  .img-group {
+    padding-left: 0;
   }
 
-  .fs-18 {
-    font-size: 16px;
+  .add-cart-btn,
+  .favorite-btn,
+  .share-btn {
+    width: 100%;
   }
 
-  .fs-12 {
-    font-size: 11px;
+  @media only screen and (min-width: 200px) and (max-width: 991px) {
+    .right-content {
+      flex-basis: 100%;
+    }
+    .left-img {
+      display: none;
+    }
+    .shape-bottom-left {
+      left: -5%;
+      top: 80%;
+    }
+    .img-card {
+      height: 250px;
+    }
+
+    .img-card h4 {
+      font-size: 32px;
+    }
+    .card-style-2 {
+      margin-bottom: 20px;
+    }
+    .h3-heading {
+      font-size: 24px;
+    }
+
+    .see-all-btn {
+      font-size: 14px;
+    }
+
+    .fs-18 {
+      font-size: 16px;
+    }
+
+    .fs-12 {
+      font-size: 11px;
+    }
+    .catering-item {
+      height: 380px;
+    }
   }
-  .catering-item {
-    height: 380px;
-}
 }
