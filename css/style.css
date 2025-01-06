@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
 * {
   font-family: "Montserrat", serif;
 }
 :root {
   --primary-blue: #005f8c;
   --primary-orange: #ffaf17;
-  --light-shade: #E6F4FA;
+  --light-shade: #e6f4fa;
 }
-.yellow-btn{
+.baloo{
+  font-family: "Baloo 2", sans-serif;
+}
+.yellow-btn {
   border-radius: 24px;
   padding: 12px 22px;
   background-color: var(--primary-orange);
@@ -16,12 +20,12 @@
   font-weight: 600;
   color: black;
 }
-.h3-heading{
+.h3-heading {
   color: var(--primary-blue);
   font-weight: 800;
   font-size: 28px;
 }
-.see-all-btn{
+.see-all-btn {
   padding: 10px 14px;
   border-radius: 24px;
   background-color: var(--light-shade);
@@ -379,60 +383,72 @@ input[type="checkbox"]:checked::after {
   width: 100%;
   height: 324px;
 }
-.img-card h4{
+
+.img-card h4 {
   font-size: 44px;
 }
-.hero-content-box{
+
+.hero-content-box {
   left: 3%;
   bottom: 10%;
 }
-.card-style{
-  flex-basis: 15%;
+
+.card-style {
   text-align: center;
 }
-.card-style img{
+
+.card-style img {
   border-radius: 22px;
   width: 100%;
 }
-.card-style h5{
+
+.card-style h5 {
   font-weight: 600;
   font-size: 14px;
   color: black;
   padding-top: 10px;
 }
-.card-style-2{
-  flex-basis: 23.5%;
+.card-style-2 {
   border-radius: 22px;
   width: 100%;
   height: 305px;
 }
-.trip-tour-1{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),url("../assets/style-2-card.jpg");
+
+.trip-tour-1 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("../assets/style-2-card.jpg");
 }
-.trip-tour-2{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),url("../assets/trip-tour-2.jpg");
-  
+
+.trip-tour-2 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("../assets/trip-tour-2.jpg");
 }
-.trip-tour-3{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),url("../assets/trip-tour-3.jpg");
-  
+
+.trip-tour-3 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("../assets/trip-tour-3.jpg");
 }
-.trip-tour-4{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),url("../assets/trip-tour-4.jpg");
+
+.trip-tour-4 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("../assets/trip-tour-4.jpg");
 }
-.trip-tour{
-   background-size: cover;
+
+.trip-tour {
+  background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.discount-box{
+
+.discount-box {
   border-radius: 22px 0px 22px 0px;
   background-color: var(--primary-orange);
   padding: 12px 11px;
   font-size: 12px;
   font-weight: 600;
 }
-.date-box{
+
+.date-box {
   width: 30px;
   border-radius: 6px;
   color: black;
@@ -442,27 +458,176 @@ input[type="checkbox"]:checked::after {
   right: 4%;
   top: 4%;
 }
-.fs-18{
+
+.fs-18 {
   font-size: 18px;
 }
-.fs-10{
+
+.fs-10 {
   font-size: 10px;
 }
-.card-style-2 .card-text{
+
+.card-style-2 .card-text {
   bottom: 5%;
   left: 5%;
 }
-.card-style-3{
-  flex-basis: 23.5%;
+.card-style-3 {
   width: 100%;
-  height: 305px;
+  height: 100%;
   border-radius: 27px;
   background-color: var(--light-shade);
   padding: 12px 10px;
 }
-.card-style-3 img{
+
+.card-style-3 img {
   border-radius: 22px;
   width: 100%;
   height: 217px;
   object-fit: cover;
+}
+
+.h3-heading {
+  font-size: 28px;
+}
+
+.see-all-btn {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+.banner {
+  height: 324px;
+  border-radius: 27px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("../assets/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner h3 {
+  font-size: 44px;
+}
+
+.banner_2 {
+  background: linear-gradient(rgba(0, 95, 140, 0.5), rgba(0, 95, 140, 0.5)), 
+    url('../assets/banner2-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner_2 .deg {
+  font-size: 94px;
+}
+
+
+
+.catering-item {
+  border-radius: 22px;
+  height: 446px;
+  width: 100%;
+}
+
+.catering-1 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+      url("../assets/catering-1.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.catering-2 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+      url("../assets/catering-2.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.catering-3 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+      url("../assets/catering-3.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.catering-price {
+  background-color: var(--primary-orange);
+  padding: 12px 20px;
+  border-radius: 22px 22px 0px 0px;
+}
+.footer {
+  background-color: #005580;
+  color: white;
+  padding: 4rem 0 1rem 0;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 1.5rem;
+  max-width: 455px;
+}
+
+.footer h5 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+}
+
+.contact-info {
+  font-size: 14px;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+.social-icon:hover{
+  transition: 0.5s;
+  color: var(--primary-orange);
 }

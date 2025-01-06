@@ -1,68 +1,222 @@
-@media only screen and (min-width: 0px) and (max-width: 575px) {
-    .shape-bottom-left{
-        display: none;
-    }
-    .login-btn{
-        width: 100%;
-    }
-    .guest-box{
-        width: 360px;
-      }
-      .otp-input {
-        width: 50px; 
-        height: 40px; 
-        font-size: 0.9rem; 
-      }
-      .modal-box {
-        max-width: 100%;
-        padding: 15px;
-      }
-    
-    
-      .modal-box h4 {
-        font-size: 1.25rem;
-      }
-    
-      .popup-close-btn {
-        width: 40px;
-        height: 40px;
-      }
+@media only screen and (max-width: 575px) {
+  .shape-bottom-left {
+    display: none;
+  }
+  .login-btn {
+    width: 100%;
+  }
+  .guest-box {
+    width: 360px;
+  }
+  .otp-input {
+    width: 50px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  .modal-box {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .modal-box h4 {
+    font-size: 1.25rem;
+  }
+
+  .popup-close-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .card-style {
+    margin-bottom: 20px;
+  }
+  
+  .see-all-btn {
+    font-size: 14px;
+  }
+  
+  .h3-heading {
+    font-size: 24px;
+  }
+  .card-style-2 {
+    height: 250px;
+  }
+
+  .h3-heading {
+    font-size: 24px;
+  }
+
+  .see-all-btn {
+    font-size: 14px;
+  }
+
+  .discount-box {
+    font-size: 10px;
+    padding: 8px 9px;
+  }
+
+  .date-box {
+    width: 25px;
+  }
+
+  .fs-18 {
+    font-size: 16px;
+  }
+
+  .card-style-2 h4 {
+    font-size: 18px;
+  }
+  .banner h3,
+  .banner_2 h3 {
+    font-size: 24px;
+  }
+
+  .banner_2 .deg {
+    font-size: 60px;
+  }
+
+  .h3-heading {
+    font-size: 24px;
+  }
+
+  .see-all-btn {
+    font-size: 14px;
+  }
+
+  .fs-18 {
+    font-size: 16px;
+  }
+
+  .fs-12 {
+    font-size: 11px;
+  }
+
+  .yellow-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .catering-item {
+    height: 320px;
+}
+
+.catering-price {
+    padding: 8px 16px;
+}
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
-    .otp-input {
-        width: 60px; 
-        height: 50px; 
-        font-size: 1rem;
-      }
-      .modal-box {
-        max-width: 95%;
-        padding: 20px; /* Adjust padding for smaller screens */
-        min-height: auto; /* Allow flexible height */
-      }
-    
-      .modal-box h4 {
-        font-size: 1.5rem; /* Reduce font size */
-      }
-    
-    
-    
-      .popup-close-btn {
-        width: 50px;
-        height: 50px;
-      }
+  .otp-input {
+    width: 60px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  .modal-box {
+    max-width: 95%;
+    padding: 20px; /* Adjust padding for smaller screens */
+    min-height: auto; /* Allow flexible height */
+  }
+
+  .modal-box h4 {
+    font-size: 1.5rem; /* Reduce font size */
+  }
+
+  .popup-close-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .card-style {
+    margin-bottom: 20px;
+  }
+  
+  .see-all-btn {
+    font-size: 16px;
+  }
+  
+  .h3-heading {
+    font-size: 28px;
+  }
+  .card-style-2 {
+    height: 280px;
+  }
+
+  .h3-heading {
+    font-size: 28px;
+  }
+
+  .see-all-btn {
+    font-size: 16px;
+  }
+
+  .discount-box {
+    font-size: 11px;
+    padding: 10px 10px;
+  }
+
+  .card-style-2 h4 {
+    font-size: 20px;
+  }
+  .card-style-3 {
+    height: auto;
+  }
+
+  .card-style-3 img {
+    height: auto;
+    max-height: 217px;
+  }
+  .banner,
+  .banner_2 {
+    height: auto;
+    min-height: 250px;
+    padding: 40px 20px;
+  }
+
+  .banner h3,
+  .banner_2 h3 {
+    font-size: 32px;
+  }
+
+  .banner_2 .deg {
+    font-size: 72px;
+  }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 991px) {
-    .right-content{
-        flex-basis: 100%;
-    }
-    .left-img{
-        display: none;
-    }
-    .shape-bottom-left{
-        left: -5%;
-        top: 80%;
-    }
+  .right-content {
+    flex-basis: 100%;
+  }
+  .left-img {
+    display: none;
+  }
+  .shape-bottom-left {
+    left: -5%;
+    top: 80%;
+  }
+  .img-card {
+    height: 250px;
+  }
+  
+  .img-card h4 {
+    font-size: 32px;
+  }
+  .card-style-2 {
+    margin-bottom: 20px;
+  }
+  .h3-heading {
+    font-size: 24px;
+  }
 
+  .see-all-btn {
+    font-size: 14px;
+  }
+
+  .fs-18 {
+    font-size: 16px;
+  }
+
+  .fs-12 {
+    font-size: 11px;
+  }
+  .catering-item {
+    height: 380px;
+}
 }
