@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Home | Bahri</title>
+</head>
+<body>
+    <header class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5">
+        <figure class="main-logo">
+            <img src="assets/bahri-main-logo.svg" alt="Bahri Logo">
+        </figure>
+        <div class="navigation-area d-flex align-items-center justify-content-between gap-3">
+            <nav class="nav-links pt-2">
+                <ul class="d-flex align-items-center justify-content-between list-unstyled">
+                    <li class="nav-items">Home</li>
+                    <li class="nav-items nav-active">Services</li>
+                    <li class="nav-items">Booking</li>
+                    <li class="nav-items">Rewards</li>
+                    <li class="search-container">
+                        <div class="position-relative py-4">
+                            <span class="icon-wrapper border-end pe-1 border-dark">
+                                <img src="assets/global-search.svg" alt="Search what you want?">
+                            </span>
+                            <input type="search" class="form-control search-input" placeholder="Search what you want?">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icon-group d-flex align-items-center gap-3">
+                <img src="assets/bag.svg" alt="Cart">
+                <img src="assets/heart.svg" alt="Wishlist">
+                <img src="assets/notification-bing.svg" alt="Notification">
+                <img src="assets/account-img.jpg" class="user-icon rounded-circle" alt="User">
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Header Start -->
+    <div class="mobile-header d-none">
+        <button class="menu-toggle">
+            <svg fill="#FFAF17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+        </button>
+        <figure class="main-logo pt-2">
+            <img class="mobile-logo" src="assets/bahri-main-logo.svg" alt="Bahri Logo">
+        </figure>
+        <img src="assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User">
+    </div>
+    <div class="off-canvas">
+        <nav class="nav-links pt-2">
+            <ul class="list-unstyled">
+                <li class="nav-items">Home</li>
+                <li class="nav-items nav-active">Services</li>
+                <li class="nav-items">Booking</li>
+                <li class="nav-items">Rewards</li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <div class="position-relative py-4">
+                <span class="icon-wrapper border-end pe-1 border-dark">
+                    <img src="assets/global-search.svg" alt="Search what you want?">
+                </span>
+                <input type="search" class="form-control search-input d-lg-none d-block" placeholder="Search what you want?">
+            </div>
+        </div>
+        <div class="icon-group d-flex align-items-center justify-content-center gap-3">
+            <img src="assets/bag.svg" alt="Cart">
+            <img src="assets/heart.svg" alt="Wishlist">
+            <img src="assets/notification-bing.svg" alt="Notification">
+        </div>
+    </div>
+    <!-- Mobile Header End -->
+    <main class="bg-white py-5">
+        <!-- Enter Delivery Address Start -->
+        <div
+        class="modal fade"
+        id="verificationModal"
+        tabindex="-1"
+        aria-labelledby="verificationModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div
+            class="modal-content flex-column mx-auto gap-3 py-4 px-4 modal-box text-center bg-white position-relative"
+          >
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              class="popup-close-btn position-absolute end-0 top-0"
+            >
+              <img src="assets/close-icon.svg" alt="Close" />
+            </button>
+            <h4 class="fw-bold" id="verificationModalLabel">Enter <br>Delivery Address</h4>
+            <form>
+                <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/user.svg"
+                        alt="Enter Full Name"
+                      />
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      placeholder="Enter Full Name"
+                    />
+                  </div>
+                  <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/phone-icon.svg"
+                        alt="Enter Mobile Number"
+                      />
+                    </span>
+                    <input
+                      type="tel"
+                      class="form-control custom-input"
+                      placeholder="Enter Mobile Number"
+                    />
+                  </div>
+                  <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/location-black.svg"
+                        alt="Enter Address-1"
+                      />
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      placeholder="Enter Address-1"
+                    />
+                  </div>
+                  <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/location-black.svg"
+                        alt="Enter Address-2"
+                      />
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      placeholder="Enter Address-2"
+                    />
+                  </div>
+                  <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/location-black.svg"
+                        alt="Enter City"
+                      />
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control custom-input"
+                      placeholder="Enter City"
+                    />
+                  </div>
+                  <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/location-black.svg"
+                        alt="Select State"
+                      />
+                    </span>
+                    <select name="" id=""  class="form-control custom-input"
+                    placeholder="Select State">
+                    <option value="Select State" class="text-dark">Select State</option>
+                    <option value="Select State" class="text-dark">Select State</option>
+                    <option value="Select State" class="text-dark">Select State</option>
+                </select>
+                  </div>
+                  <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/location-black.svg"
+                        alt="Select State"
+                      />
+                    </span>
+                    <select name="" id=""  class="form-control custom-input"
+                    placeholder="Select Country">
+                    <option value="Select Country" class="text-dark">Select Country</option>
+                    <option value="Select Country" class="text-dark">Select Country</option>
+                    <option value="Select Country" class="text-dark">Select Country</option>
+                </select>
+                  </div>
+                  <div class="position-relative py-2">
+                    <span class="icon-wrapper">
+                      <img
+                        class="opacity-20"
+                        src="assets/location-black.svg"
+                        alt="Enter Zip Code"
+                      />
+                    </span>
+                    <input
+                      type="tel"
+                      class="form-control custom-input"
+                      placeholder="Enter Zip Code"
+                    />
+                  </div>
+
+              <button
+              id="confirmButton"
+                type="button"
+                class="right-arw-btn login-btn fw-bold mt-2 mb-4 w-100"
+              >
+                Confirm
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+        <!-- Enter Delivery Address End -->
+         <!-- Payment Successful Popup Start -->
+         <div
+         class="modal fade"
+         id="paymentSuccessfulModal"
+         tabindex="-1"
+         aria-labelledby="verificationModalLabel"
+         aria-hidden="true"
+
+         data-bs-toggle="modal"
+                    data-bs-target="#InvoiceModal"
+       >
+         <div class="modal-dialog modal-dialog-centered">
+           <div
+             class="modal-content flex-column align-items-center justify-content-center text-white position-relative overflow-hidden mx-auto gap-3 py-4 px-4 payment-success-modal text-center position-relative"
+           >
+             <img src="assets/success-top.svg" class="position-absolute  top-0 end-0 m-0 p-0" alt="Shape">
+             <img src="assets/success-btm.svg" class="position-absolute bottom-0 start-0 m-0 p-0" alt="Shape">
+
+             <div>
+              <img src="assets/verify-success.svg" alt="Payment Successful">
+              <h4 class="cart-heading text-white pt-3">Payment <br>Successful!</h4>
+              <p class="fs-14 fw-medium opacity-20">Thank you for your purchase. Your payment has been successfully processed.</p>
+              <div class="fw-bolder fs-14 pt-3">Order Update</div>
+              <p class="fs-14 fw-medium opacity-20">Your order will be delivered within 5–6 working days.</p>
+             </div>
+            </div>
+            <button
+            type="button"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            class="popup-close-btn success-close-btn d-md-block d-flex align-items-center justify-content-center position-absolute bg-white rounded-circle top-100"
+          >
+            <img src="assets/blue-close.svg" alt="Close" />
+          </button>             
+         </div>
+       </div>
+         <!-- Payment Successful Popup End -->
+          <!-- Invoice Popup Start -->
+        <div
+        class="modal fade"
+        id="InvoiceModal"
+        tabindex="-1"
+        aria-labelledby="InvoiceModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div
+            class="modal-content flex-column mx-auto gap-3 py-4 px-4 invoice-modal text-center bg-white position-relative"
+          >
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              class="popup-close-btn position-absolute end-0 top-0"
+            >
+              <img src="assets/close-icon.svg" alt="Close" />
+            </button>
+            <h4 class="fw-bold" id="InvoiceModalLabel">Invoice</h4>
+            <div>
+              <div class="d-flex flex-column gap-3">
+                <div class="cart-item">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/detail-img.jpg" alt="Marinesheild Pro Life Jacket">
+                        <div class="w-100">
+                            <h4 class="fw-medium fs-6 my-2 text-start">Marinesheild Pro Life Jacket</h4>
+                            <div class="d-flex justify-content-between">
+                                <div class="fw-bold">$200</div>
+                                <div class="fw-medium text-black opacity-50 fs-12">Qty-2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/detail-img.jpg" alt="Marinesheild Pro Life Jacket">
+                        <div class="w-100">
+                            <h4 class="fw-medium fs-6 my-2 text-start">Marinesheild Pro Life Jacket</h4>
+                            <div class="d-flex justify-content-between">
+                                <div class="fw-bold">$200</div>
+                                <div class="fw-medium text-black opacity-50 fs-12">Qty-2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-unstyled py-2 text-start">
+              <li class="d-flex justify-content-between fw-medium text-black py-2"><p>Transaction ID</p><span class="fw-bold">XN-9087654321</span></li>
+              <li class="d-flex justify-content-between fw-medium text-black py-2"><p>Purchase Date</p><span class="fw-bold">October 26, 2023</span></li>
+              <li class="d-flex justify-content-between fw-medium text-black py-2"><p>Payment Method</p><span class="fw-bold text-end">Credit Card <br>(Visa ending in 1234)</span></li>
+              <li class="d-flex justify-content-between fw-medium text-black py-2"><p>Total Amount Paid</p><span class="fw-bold">$485.00</span></li>
+          </ul>
+          <div class="text-start">
+            <h5 class="fs-14 fw-medium">Delivery Address</h5 class="fs-14 fw-medium">
+            <div class="fs-14 fw-bold">James Thomas</div>
+            <span class="fs-14 opacity-20">
+              123 Ocean View Lane, Suite 456, Marina Bay, Kuwait City, Kuwait, 60000 | <span>(505) 555-0125</span>
+            </span>
+            
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Invoice Popup End -->
+        <section class="container-fluid container-lg mx-auto row">
+            <div class="col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex">
+                <div class="col-12 col-sm-10 col-lg-9">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="assets/arrow-left-black.svg" alt="Back">
+                        <h2 class="cart-heading">Cart</h2>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between py-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="checkbox-container">
+                                <input id="select-all" type="checkbox" name="">
+                            </div>
+                            <label for="select-all">Select All</label>
+                        </div>
+                        <img src="assets/trash.svg" alt="Delete">
+                    </div>
+                    <div class="d-flex flex-column gap-3 py-2">
+                        <div class="cart-item">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="assets/detail-img.jpg" alt="Marinesheild Pro Life Jacket">
+                                <div class="w-100">
+                                    <h4 class="fw-medium fs-6 my-1">Marinesheild Pro Life Jacket</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="fw-bold">$200</div>
+                                        <div class="quantity-btn d-flex align-items-center justify-content-between">
+                                            <button class="d-flex align-items-center justify-content-center"><i class="fa-solid fa-minus"></i></button>
+                                            <div class="fs-14 fw-bold text-white">2</div>
+                                            <button class="d-flex align-items-center justify-content-center"><i class="fa-solid fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="assets/detail-img.jpg" alt="Marinesheild Pro Life Jacket">
+                                <div class="w-100">
+                                    <h4 class="fw-medium fs-6 my-1">Marinesheild Pro Life Jacket</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="fw-bold">$200</div>
+                                        <div class="quantity-btn d-flex align-items-center justify-content-between">
+                                            <button class="d-flex align-items-center justify-content-center"><i class="fa-solid fa-minus"></i></button>
+                                            <div class="fs-14 fw-bold text-white">2</div>
+                                            <button class="d-flex align-items-center justify-content-center"><i class="fa-solid fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 text-start pt-3">
+                        <input type="checkbox" checked class="mb-3 p-2 mt-1" id="customCheckbox">
+                        <p class="text-black fs-14 fw-medium">By completing checkout, you agree to our terms and conditions. Orders depend on availability, with refunds processed as per our policy within 7–10 business days. <br> Ensure accurate details to avoid delays. For full details, visit our Terms page.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 py-3 d-flex align-items-center justify-content-center justify-content-lg-start">
+                <div class="col-12 col-sm-10 col-lg-9">
+                    <button  id="addAddressButton" type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#verificationModal" class="add-address-box text-center py-4 w-100">
+                        <img src="assets/location-add.svg" alt="Add Address">
+                        Add Address
+                    </button>
+                    <div id="addressBox" class="d-none add-address-box py-4 w-100 position-relative px-4 text-black">
+                        <button type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#verificationModal" class="change-btn position-absolute top-0 end-0">Change</button>
+                        <h5 class="fw-semibold fs-6">James Thomas</h5>
+                        <p class="fs-14 m-0 opacity-75">123 Ocean View Lane, Suite 456, Marina Bay, Kuwait City, Kuwait, 60000</p>
+                        <span class="fs-14 opacity-75">(505) 555-0125</span>
+                    </div>
+                    <ul class="list-unstyled py-2">
+                        <li class="d-flex justify-content-between fw-medium text-black"><p>Amount</p><span class="fw-bold">$550.00</span></li>
+                        <li class="d-flex justify-content-between fw-medium text-black"><p>Discount</p><span class="fw-bold">10%</span></li>
+                        <li class="d-flex justify-content-between fw-medium text-black"><p><img src="assets/coin.svg" alt="Points"> 50 Rewards</p><span class="fw-bold">10%</span></li>
+                        <li class="d-flex justify-content-between fw-medium text-black"><p>Total Amount</p><span class="fw-bold">$495.00</span></li>
+                    </ul>
+                    <button type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#paymentSuccessfulModal" class="add-cart-btn w-100">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                    <img src="assets/bahri-main-logo.svg" alt="Bahri Logo" class="footer-logo">
+                    <p class="footer-description">
+                        Welcome to Bahri – your gateway to unforgettable marine experiences! At Bahri, we specialize in marine equipment and boat rentals, along with a wide range of services to enhance your time on the water. Whether you're looking to embark on a scenic tour, book a thrilling trip, or find the perfect equipment for your marine adventures, Bahri has you covered!
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands social-icon fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands social-icon fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands social-icon fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands social-icon fa-twitter"></i></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Pages</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5>CONTACT INFO</h5>
+                    <div class="contact-info">
+                        <p>Address:<br>
+                        Budapest Hungry, 1054</p>
+                        <p>Email:<br>
+                        info@leaderfaory.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © 2024 bahri All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Mobile Header Start -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const offCanvas = document.querySelector('.off-canvas');
+
+    menuToggle.addEventListener('click', function() {
+        offCanvas.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!offCanvas.contains(event.target) && !menuToggle.contains(event.target)) {
+            offCanvas.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    });
+});
+   
+   </script>
+    <!-- Mobile Header End -->
+<!-- Add Address Script Start -->
+     <script>
+        document.getElementById("confirmButton").addEventListener("click", function () {
+  const addressBox = document.getElementById("addressBox");
+  addressBox.classList.remove("d-none");
+  addressBox.classList.add("d-block");
+
+  const addAddressButton = document.getElementById("addAddressButton");
+  addAddressButton.style.display = "none";
+});
+     </script>
+     <!-- Add Address Script End -->
+      
+</body>
+</html>

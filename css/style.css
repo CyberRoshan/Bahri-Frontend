@@ -192,6 +192,7 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   background-color: #fff;
   border: 2px solid #19c90d;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -258,7 +259,7 @@ input[type="checkbox"]:checked::after {
 .common-header {
   background-color: var(--primary-blue);
   height: 90px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .nav-items {
@@ -748,4 +749,267 @@ input[type="checkbox"]:checked::after {
 .availability-box {
   border-top: 1px solid var(--light-shade);
   border-bottom: 1px solid var(--light-shade);
+}
+
+.rating-card {
+  padding: 20px 30px;
+  background-color: var(--primary-blue);
+  border-radius: 17px;
+  font-size: 14px;
+  width: 100%;
+}
+.rating-card .user-name {
+  color: var(--primary-orange);
+  font-style: italic;
+}
+.star-icon-fill {
+  color: var(--primary-orange);
+}
+.gallery-img {
+  border-radius: 22px;
+  width: 85px;
+  height: 104px;
+  object-fit: cover;
+}
+.pdetail-imgs {
+  width: 95px;
+  height: 95px;
+  border-radius: 22px;
+  object-fit: cover;
+}
+.seller-box img {
+  border-radius: 17px;
+  width: 54px;
+  height: 54px;
+}
+.see-product-btn {
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  background-color: white;
+  padding: 8px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 24px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.availability-box {
+  border-top: 1px solid var(--light-shade);
+  border-bottom: 1px solid var(--light-shade);
+}
+
+.cart-heading{
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Hide the default checkbox */
+.checkbox-container input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--light-shade);
+  border-radius: 3px;
+  border: 2px solid var(--light-shade);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+/* Styling for the checkmark */
+.checkbox-container input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--primary-blue);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.cart-item{
+  border-radius: 17px;
+  background-color: var(--light-shade);
+  padding: 12px;
+}
+.cart-item img{
+  width: 74px;
+  height: 74px;
+  border-radius: 17px;
+}
+.quantity-btn{
+  width: 64px;
+  border-radius: 15px;
+  background-color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+}
+.quantity-btn button{
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
+  color: white;
+  font-size: 15px;
+}
+.add-address-box{
+  border-radius: 17px;
+  border: 1px dashed var(--primary-blue);
+  background-color: var(--light-shade);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-blue);
+}
+.change-btn{
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 0px 17px 0px 17px;
+  border: 1px solid var(--primary-blue);
+}
+
+
+
+.payment-success-modal{
+  width: 375px;
+  height: 600px;
+  background-color: var(--primary-blue);
+  border-radius: 30px;
+}
+.success-close-btn{
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.invoice-modal{
+  width: 405px;
+  /* height: 660px; */
+  border-radius: 27px;
+}
+.rating-card-lite{
+  background-color: var(--light-shade);
+  color: black;
+}
+.profile-dropdown{
+  border-radius: 25px;
+  border: none;
+}
+.polygon-shape{
+  right: 4%;
+  top: -4%;
+}
+
+
+
+
+/* Reset Bootstrap's default dropdown behavior */
+.dropdown-menu {
+  display: block !important;
+}
+
+/* Backdrop styles */
+/* .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1050;
+}
+
+.backdrop.show {
+  opacity: 1;
+  visibility: visible;
+} */
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  z-index: 1060;
+}
+
+/* User icon styles */
+.user-icon {
+  cursor: pointer;
+  position: relative;
+  z-index: 1060;
+}
+
+/* Profile dropdown styles */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1060;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.profile-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Polygon pointer styles */
+.polygon-shape {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  z-index: 1060;
+}
+
+/* Menu item styles */
+.dropdown-item {
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+.dropdown-icon{
+  width: 74px;
+  height: 74px;
+  border-radius: 17px;
+  border: 2px solid #F9F8F5;
+}
+.profile-dropdown h6{
+  color: var(--primary-blue);
+}
+.profile-dropdown small{
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+}
+.logout-btn{
+  font-size: 15px;
+  color: #EA4335;
 }

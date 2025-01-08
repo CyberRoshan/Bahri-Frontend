@@ -10,6 +10,7 @@
     <title>Home | Bahri</title>
 </head>
 <body>
+    <div class="backdrop"></div>
     <img class="position-absolute top-0 start-0 d-lg-block d-none" src="assets/shape-1.svg" alt="">
     <img class="position-absolute top-0 end-0 d-lg-block d-none" src="assets/shape-2.svg" alt="">
     <header class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5">
@@ -37,7 +38,74 @@
                 <img src="assets/bag.svg" alt="Cart">
                 <img src="assets/heart.svg" alt="Wishlist">
                 <img src="assets/notification-bing.svg" alt="Notification">
-                <img src="assets/account-img.jpg" class="user-icon rounded-circle" alt="User">
+                <div class="dropdown">
+                    <img src="assets/account-img.jpg" class="user-icon rounded-circle" alt="User">
+                    
+                    <div class="dropdown-menu profile-dropdown" style="width: 295px;">
+                      <img src="assets/Polygon.svg" class="position-absolute polygon-shape" alt="">
+                      <!-- User Info -->
+                      <div class="px-4 py-3 border-bottom">
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="assets/account-img.jpg" class="dropdown-icon" alt="Profile">
+                          <div>
+                            <h6 class="mb-0 fw-bold fs-18">James Thomas</h6>
+                            <small class="text-muted">(219) 555-0114</small>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Menu Items -->
+                      <div class="py-2">
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                          <img src="assets/weather.svg" class="me-3" alt="Weather">
+                          Weather
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/calender.svg" class="me-3" alt="Booking History">
+                          Booking History
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/market-place.svg" class="me-3" alt="Market Places">
+                          Market Places
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/my-fav.svg" class="me-3" alt="My Favorites">
+                          My Favorites
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/rewards.svg" class="me-3" alt="Rewards">
+                          Rewards
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/edit-profile.svg" class="me-3" alt="Edit Profile">
+                          Edit Profile
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/payment-method.svg" class="me-3" alt="Payment Method">
+                          Payment Method
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/order-history.svg" class="me-3" alt="Order History">
+                          Order History
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/language.svg" class="me-3" alt="Language">
+                          Language
+                        </a>
+                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                            <img src="assets/seetings.svg" class="me-3" alt="Settings">
+                          Settings
+                        </a>
+                      </div>
+                  
+                      <!-- Logout -->
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item d-flex fw-bold align-items-center px-4 py-3 logout-btn">
+                        LOGOUT
+                      </a>
+                    </div>
+                  </div>
+                  
             </div>
         </div>
     </header>
@@ -49,7 +117,79 @@
         <figure class="main-logo pt-2">
             <img class="mobile-logo" src="assets/bahri-main-logo.svg" alt="Bahri Logo">
         </figure>
-        <img src="assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User">
+        <!-- <img src="assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User"> -->
+        
+
+        <div class="dropdown">
+            <img src="assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User">
+            <!-- Dropdown menu (same as desktop, it's repeated here for clarity) -->
+           
+            <div class="dropdown-menu profile-dropdown" style="width: 295px;">
+                <img src="assets/Polygon.svg" class="position-absolute polygon-shape" alt="">
+                <!-- User Info -->
+                <div class="px-4 py-3 border-bottom">
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="assets/account-img.jpg" class="dropdown-icon" alt="Profile">
+                    <div>
+                      <h6 class="mb-0 fw-bold fs-18">James Thomas</h6>
+                      <small class="text-muted">(219) 555-0114</small>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Menu Items -->
+                <div class="py-2">
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                    <img src="assets/weather.svg" class="me-3" alt="Weather">
+                    Weather
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/calender.svg" class="me-3" alt="Booking History">
+                    Booking History
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/market-place.svg" class="me-3" alt="Market Places">
+                    Market Places
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/my-fav.svg" class="me-3" alt="My Favorites">
+                    My Favorites
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/rewards.svg" class="me-3" alt="Rewards">
+                    Rewards
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/edit-profile.svg" class="me-3" alt="Edit Profile">
+                    Edit Profile
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/payment-method.svg" class="me-3" alt="Payment Method">
+                    Payment Method
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/order-history.svg" class="me-3" alt="Order History">
+                    Order History
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/language.svg" class="me-3" alt="Language">
+                    Language
+                  </a>
+                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                      <img src="assets/seetings.svg" class="me-3" alt="Settings">
+                    Settings
+                  </a>
+                </div>
+            
+                <!-- Logout -->
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item d-flex fw-bold align-items-center px-4 py-3 logout-btn">
+                  LOGOUT
+                </a>
+              </div>
+          </div>
+        
+
     </div>
     <div class="off-canvas">
         <nav class="nav-links pt-2">
@@ -452,6 +592,49 @@
         }
     });
 });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const userIcons = document.querySelectorAll('.user-icon');
+        const dropdownMenus = document.querySelectorAll('.profile-dropdown');
+        const backdrop = document.querySelector('.backdrop');
+    
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            const clickedIcon = event.currentTarget;
+            const associatedDropdown = clickedIcon.nextElementSibling;
+    
+            // Close all other dropdowns
+            dropdownMenus.forEach(menu => {
+                if (menu !== associatedDropdown) {
+                    menu.classList.remove('show');
+                }
+            });
+    
+            // Toggle the clicked dropdown
+            associatedDropdown.classList.toggle('show');
+            backdrop.classList.toggle('show');
+        }
+    
+        function closeAllDropdowns() {
+            dropdownMenus.forEach(menu => menu.classList.remove('show'));
+            backdrop.classList.remove('show');
+        }
+    
+        userIcons.forEach(icon => {
+            icon.addEventListener('click', toggleDropdown);
+        });
+    
+        backdrop.addEventListener('click', closeAllDropdowns);
+    
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown')) {
+                closeAllDropdowns();
+            }
+        });
+    });
     </script>
     <!-- Mobile Header End -->
 </body>
