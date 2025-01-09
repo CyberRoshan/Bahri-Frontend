@@ -1013,3 +1013,53 @@ input[type="checkbox"]:checked::after {
   font-size: 15px;
   color: #EA4335;
 }
+
+
+
+.rewards-box {
+  max-width: 550px;
+  margin: auto;
+}
+
+.total-coins {
+  border-radius: 18px;
+  background: linear-gradient(90deg, #005F8C, #005076);
+}
+
+.total-coins h4 {
+  font-size: 30px;
+  color: var(--primary-orange);
+}
+
+.redeem-btn {
+  border-radius: 24px;
+  background-color: var(--primary-orange);
+  padding: 6px 16px;
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid var(--primary-orange);
+}
+
+.h5-heading {
+  color: var(--primary-blue);
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.reward-card {
+  border-radius: 17px;
+  background-color: var(--light-shade);
+  padding: 15px;
+}
+
+.reward-img {
+  border-radius: 17px;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.cart-heading {
+  font-size: 28px;
+}
