@@ -392,72 +392,8 @@
     </div>
   </footer>
 
+  <script src="JS/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Mobile Header Start -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const offCanvas = document.querySelector('.off-canvas');
-
-      menuToggle.addEventListener('click', function () {
-        offCanvas.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-      });
-
-      document.addEventListener('click', function (event) {
-        if (!offCanvas.contains(event.target) && !menuToggle.contains(event.target)) {
-          offCanvas.classList.remove('active');
-          menuToggle.classList.remove('active');
-        }
-      });
-    });
-  </script>
-  <!-- Mobile Header End -->
-
-  <!-- User Popup Header Start -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const userIcons = document.querySelectorAll('.user-icon');
-      const dropdownMenus = document.querySelectorAll('.profile-dropdown');
-      const backdrop = document.querySelector('.backdrop');
-
-      function toggleDropdown(event) {
-        event.stopPropagation();
-        const clickedIcon = event.currentTarget;
-        const associatedDropdown = clickedIcon.nextElementSibling;
-
-        // Close all other dropdowns
-        dropdownMenus.forEach(menu => {
-          if (menu !== associatedDropdown) {
-            menu.classList.remove('show');
-          }
-        });
-
-        // Toggle the clicked dropdown
-        associatedDropdown.classList.toggle('show');
-        backdrop.classList.toggle('show');
-      }
-
-      function closeAllDropdowns() {
-        dropdownMenus.forEach(menu => menu.classList.remove('show'));
-        backdrop.classList.remove('show');
-      }
-
-      userIcons.forEach(icon => {
-        icon.addEventListener('click', toggleDropdown);
-      });
-
-      backdrop.addEventListener('click', closeAllDropdowns);
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function (event) {
-        if (!event.target.closest('.dropdown')) {
-          closeAllDropdowns();
-        }
-      });
-    });
-  </script>
-  <!-- User Popup Header End -->
 </body>
 
 </html>
