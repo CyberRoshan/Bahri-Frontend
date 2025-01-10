@@ -1051,6 +1051,7 @@ input[type="checkbox"]:checked::after {
   border-radius: 17px;
   background-color: var(--light-shade);
   padding: 15px;
+  cursor: pointer;
 }
 
 .reward-img {
@@ -1062,4 +1063,260 @@ input[type="checkbox"]:checked::after {
 
 .cart-heading {
   font-size: 28px;
+}
+.modal-coin {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+.blue-modal-title {
+  font-size: 30px;
+  color: var(--primary-blue);
+}
+
+.redeem-modal {
+  max-width: 365px;
+  width: 90%;
+  border-radius: 27px;
+}
+
+.add-cart-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 17px;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  background-color: #004a6e;
+}
+
+
+.modal-refer-img {
+  max-width: 100%;
+  height: auto;
+  width: 285px;
+}
+.edit-user-img{
+  width: 115px;
+  height: 115px;
+}
+.camera-icon{
+  left: 50%;
+  top: 75%;
+  transform: translateX(-50%);
+}
+
+
+
+.product-card {
+  border-radius: 17px;
+  background-color: var(--light-shade);
+  height: 100%;
+}
+
+.product-card img {
+  border-radius: 17px;
+  max-height: 192px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.product-card p {
+  letter-spacing: 0.5px;
+}
+
+.delivery-badge {
+  border-radius: 24px;
+  background-color: var(--primary-blue);
+  padding: 8px 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 10px;
+}
+.pb-120{
+  padding-bottom: 120px;
+}
+
+
+
+/* Notification dropdown styles */
+.notification-dropdown {
+  position: relative;
+  z-index: 1060;
+}
+
+.notification-icon {
+  cursor: pointer;
+  position: relative;
+  z-index: 1060;
+}
+
+/* Notification menu styles */
+.notification-menu {
+  width: 370px;
+  position: absolute;
+  right: -10px;
+  top: 40px;
+  margin-top: 10px;
+  background: white;
+  border-radius: 25px;
+  z-index: 1060;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(-10px);
+  max-height: 578px;
+  padding: 25px 15px;
+}
+.polygon-shape-2{
+  top: -3%;
+  right: 2%;
+}
+.notification-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.notification-box{
+  background-color: var(--light-shade);
+  border-radius: 17px;
+  padding: 12px;
+}
+.notification-box h5{
+  color: var(--primary-blue);
+}
+.notification-box p{
+  font-size: 10px;
+  font-weight: 500;
+}
+.notification-box span{
+  font-size: 8px;
+  color: black;
+  opacity: 40%;
+  font-weight: 700;
+  bottom: 15px;
+  right: 15px;
+}
+
+
+.product-card-2{
+  border-radius: 17px;
+  background-color: var(--light-shade);
+}
+.product-card-2 img{
+  height: 192px;
+  border-radius: 17px;
+  width: 100%;
+  object-fit: cover;
+}
+.product-card-2 h3{
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+
+.toggle-btn {
+  display: inline-flex;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle Btn */
+.toggle-container {
+  background-color: var(--light-shade);
+  border-radius: 17px;
+  display: inline-flex;
+  position: relative;
+  width: 335px;
+  height: 50px;
+}
+
+.toggle-button {
+  flex: 1;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  border-radius: 17px;
+  background: transparent;
+  font-weight: 800;
+}
+
+.toggle-button.active {
+  color: white;
+}
+
+.toggle-button:not(.active) {
+  color: black;
+  opacity: 60%;
+}
+
+.slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: calc(50% - 5px);
+  height: calc(100% - 10px);
+  background-color: var(--primary-blue);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.slider.right {
+  transform: translateX(100%);
+}
+
+/* Add animation for text */
+.toggle-button {
+  transition: transform 0.2s ease;
+}
+
+.toggle-button:active {
+  transform: scale(0.95);
+}
+
+
+.tab-content {
+  position: relative;
+}
+
+.tab-pane {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-pane.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transform: translateX(0);
+}
+
+.cancel-btn{
+  background-color: #EA4335;
+}
+.blue-text{
+  color: var(--primary-blue);
+}
+.booking-date{
+  font-size: 16px;
+  color: #EA4335;
 }
