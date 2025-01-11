@@ -52,6 +52,47 @@
       </div>
     </div>
     <!-- Logout Popup End -->
+     <!-- !-- Weather Popup Start -->
+    <div class="modal fade" id="WeatherModal" tabindex="-1" aria-labelledby="WeatherModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content flex-column mx-auto gap-3 p-0  modal-box weather-box text-center bg-white position-relative">
+          <button type="button" data-bs-dismiss="modal" aria-label="Close" class="popup-close-btn position-absolute end-0 top-0  border-0">
+            <img src="assets/close-icon.svg" alt="Close" />
+          </button>
+          <div class="weather-img d-flex align-items-end p-3">
+            <div class="text-white text-start">
+              <h2 id="WeatherModalLabel" class="fw-bold m-0 weather-data">22°C</h2>
+              <div class="fs-18 m-0">Temperature</div>
+              <p class="fs-10 m-0 mt-1 fw-medium weather-badge">Conditions: Sunny / Cloudy / Rainy</p>
+            </div>
+          </div>
+          <div class="p-2 pb-3 weather-main-block d-flex gap-3">
+            <div class="weather-block-1">
+              <div class="w-block-1 py-3 px-2 mb-3">
+                <img src="assets/wave 1.svg" alt="Wave">
+                <div class="fs-24 blue-text fw-bold">1.5m</div>
+                <p class="fw-medium fs-14 text-black">Wave Height</p>
+              </div>
+              <div class="w-block-2 py-3 px-2">
+                <img src="assets/tride.svg" alt="Tide">
+                <div class="fs-24 fw-bold text-white">High Tide</div>
+                <p class="text-black fs-14 fw-medium">Levels</p>
+              </div>
+            </div>
+            <div class="weather-block-2 d-flex align-items-center justify-content-center">
+              <div class="text-center text-white d-flex flex-column gap-2 px-3 py-4">
+                <img class="mx-auto" src="assets/fishing.svg" alt="Fishing">
+                <h6 class="fs-24 fw-bold yellow-text m-0">Excellent</h6>
+                <p class="fs-14 m-0">Fishing <br>Conditions</p>
+                <div class="fs-14 fw-bold yellow-text m-0">5:00 AM - 9:00 AM</div>
+                <span class="fs-10 fw-medium m-0">Best Time to Fishing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- ! Weather Popup End -->
     <header
       class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5"
     >
@@ -87,7 +128,7 @@
           </ul>
         </nav>
         <div class="icon-group d-flex align-items-center gap-3">
-          <img src="assets/bag.svg" alt="Cart" />
+          <img type="button" data-bs-toggle="modal" data-bs-target="#WeatherModal" src="assets/bag.svg" alt="Cart" />
           <img src="assets/heart.svg" alt="Wishlist" />
           <div class="dropdown notification-dropdown">
             <img
@@ -501,7 +542,7 @@
       <div
         class="icon-group d-flex align-items-center justify-content-center gap-3"
       >
-        <img src="assets/bag.svg" alt="Cart" />
+        <img type="button" data-bs-toggle="modal" data-bs-target="#WeatherModal" src="assets/bag.svg" alt="Cart" />
         <img src="assets/heart.svg" alt="Wishlist" />
         <!-- <img src="assets/notification-bing.svg" alt="Notification"> -->
         <div class="dropdown notification-dropdown">

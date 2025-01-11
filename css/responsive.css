@@ -240,6 +240,31 @@
   ul.gap-4 {
     gap: 1rem !important;
   }
+  .weather-img {
+    height: 200px;
+  }
+
+  .weather-data {
+    font-size: 50px;
+  }
+  .weather-block-2 img {
+    width: 45px;
+    height: 45px;
+  }
+  .add-review-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .review-star {
+    width: 30px;
+    height: 30px;
+  }
+  .add-review-image,
+  .add-review-btn {
+    width: 70px;
+    height: 82px;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
@@ -377,6 +402,43 @@
 
   .lh-lg {
     line-height: 1.6 !important;
+  }
+  .weather-img {
+    height: 250px;
+  }
+
+  .weather-data {
+    font-size: 60px;
+  }
+
+  .weather-badge {
+    padding: 8px 12px;
+  }
+
+  .weather-main-block {
+    flex-direction: column;
+  }
+
+  .weather-block-1,
+  .weather-block-2 {
+    flex-basis: 100%;
+  }
+
+  .weather-block-2 {
+    margin-top: 1rem;
+  }
+  .add-review-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .review-star {
+    width: 35px;
+    height: 35px;
+  }
+
+  .review-textbox {
+    padding: 15px;
   }
 }
 
