@@ -198,3 +198,8 @@ function toggle(index) {
 }
 // ! Toggle Button End
 // ? booking-history.html End
+
+
+// ! Price Range Slider Start
+
+// ! Price Range Slider End

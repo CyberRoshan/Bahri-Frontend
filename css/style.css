@@ -1441,11 +1441,14 @@ input[type="checkbox"]:checked::after {
 /* Services */
 .filter-block{
   flex-basis: 28%;
-  border-right: 1px solid var(--primary-blue);
+  border-right: 1px solid rgba(0, 95, 140, 0.2);
+  transition: all 0.3s ease;
 }
 .services-block{
   flex-basis: 72%;
+  transition: all 0.3s ease;
 }
+
 .filter-header {
   margin-bottom: 24px;
 }
@@ -1588,11 +1591,122 @@ input[type="checkbox"]:checked::after {
   height: 36px;
   width: 36px;
   border: 1px solid var(--primary-orange);
+  transition: all 0.3s ease;
 }
 .next-prev-btn-big img{
   width: 20px;
   height: 20px;
+  transition: all 0.3s ease;
 }
 .rotate-btn{
   transform: rotate(180deg);
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--light-shade);
+  opacity: 1;
+}
+.carousel-indicators .active {
+  background-color: var(--primary-blue);
+}
+
+
+.fav-btn{
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.fav-btn svg{
+  top: 10px;
+  right: 10px;
+}
+
+.red-text{
+  color: #ea4335;
+}
+
+.candle-icon{
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.boat-search{
+  width: 335px;
+}
+
+
+.supplier-detail > .user-img{
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.fs-22{
+  font-size: 22px;
+}
+.contact-btn{
+  width: 162px;
+  height: 60px;
+  border-radius: 17px;
+  font-weight: 700;
+  background-color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
+  color: white;
+}
+.whatsapp-btn{
+  background-color: #34A853;
+  border: 1px solid #34A853;
+}
+.rounded-27{
+  border-radius: 27px !important;
+}
+
+.custom-textarea textarea{
+  height: auto;
+  resize: none;
+}
+.custom-textarea img{
+  top: 0%;
+}
+.custom-textarea .textarea-icon{
+  top: 16%;
+}
+.fs-30{
+  font-size: 30px;
+}
+.additional-info h4{
+  font-size: 18px;
+}
+.additional-info img{
+  width: 24px;
+  height: 24px;
+}
+
+.upload-container {
+  max-width: 600px;
+}
+
+.upload-area {
+  border: 1px dashed var(--primary-blue);
+  border-radius: 17px;
+  height: 116px;
+  text-align: center;
+  background-color: var(--light-shade);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.upload-area:hover {
+  background-color: #f0f9ff;
+}
+.upload-icon {
+  width: 32px;
+  height: 32px;
+}
+#fileInput {
+  display: none;
 }

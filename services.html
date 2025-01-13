@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <title>Services | Bahri</title>
 </head>
+
 <body>
     <div class="backdrop"></div>
     <!-- !-- Weather Popup Start -->
     <div class="modal fade" id="WeatherModal" tabindex="-1" aria-labelledby="WeatherModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content flex-column mx-auto gap-3 p-0  modal-box weather-box text-center bg-white position-relative">
-            <button type="button" data-bs-dismiss="modal" aria-label="Close" class="popup-close-btn position-absolute end-0 top-0  border-0">
-              <img src="assets/close-icon.svg" alt="Close" />
-            </button>
-            <div class="weather-img d-flex align-items-end p-3">
-              <div class="text-white text-start">
-                <h2 id="WeatherModalLabel" class="fw-bold m-0 weather-data">22°C</h2>
-                <div class="fs-18 m-0">Temperature</div>
-                <p class="fs-10 m-0 mt-1 fw-medium weather-badge">Conditions: Sunny / Cloudy / Rainy</p>
-              </div>
+            <div
+                class="modal-content flex-column mx-auto gap-3 p-0  modal-box weather-box text-center bg-white position-relative">
+                <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                    class="popup-close-btn position-absolute end-0 top-0  border-0">
+                    <img src="assets/close-icon.svg" alt="Close" />
+                </button>
+                <div class="weather-img d-flex align-items-end p-3">
+                    <div class="text-white text-start">
+                        <h2 id="WeatherModalLabel" class="fw-bold m-0 weather-data">22°C</h2>
+                        <div class="fs-18 m-0">Temperature</div>
+                        <p class="fs-10 m-0 mt-1 fw-medium weather-badge">Conditions: Sunny / Cloudy / Rainy</p>
+                    </div>
+                </div>
+                <div class="p-2 pb-3 weather-main-block d-flex gap-3">
+                    <div class="weather-block-1">
+                        <div class="w-block-1 py-3 px-2 mb-3">
+                            <img src="assets/wave 1.svg" alt="Wave">
+                            <div class="fs-24 blue-text fw-bold">1.5m</div>
+                            <p class="fw-medium fs-14 text-black">Wave Height</p>
+                        </div>
+                        <div class="w-block-2 py-3 px-2">
+                            <img src="assets/tride.svg" alt="Tide">
+                            <div class="fs-24 fw-bold text-white">High Tide</div>
+                            <p class="text-black fs-14 fw-medium">Levels</p>
+                        </div>
+                    </div>
+                    <div class="weather-block-2 d-flex align-items-center justify-content-center">
+                        <div class="text-center text-white d-flex flex-column gap-2 px-3 py-4">
+                            <img class="mx-auto" src="assets/fishing.svg" alt="Fishing">
+                            <h6 class="fs-24 fw-bold yellow-text m-0">Excellent</h6>
+                            <p class="fs-14 m-0">Fishing <br>Conditions</p>
+                            <div class="fs-14 fw-bold yellow-text m-0">5:00 AM - 9:00 AM</div>
+                            <span class="fs-10 fw-medium m-0">Best Time to Fishing</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="p-2 pb-3 weather-main-block d-flex gap-3">
-              <div class="weather-block-1">
-                <div class="w-block-1 py-3 px-2 mb-3">
-                  <img src="assets/wave 1.svg" alt="Wave">
-                  <div class="fs-24 blue-text fw-bold">1.5m</div>
-                  <p class="fw-medium fs-14 text-black">Wave Height</p>
-                </div>
-                <div class="w-block-2 py-3 px-2">
-                  <img src="assets/tride.svg" alt="Tide">
-                  <div class="fs-24 fw-bold text-white">High Tide</div>
-                  <p class="text-black fs-14 fw-medium">Levels</p>
-                </div>
-              </div>
-              <div class="weather-block-2 d-flex align-items-center justify-content-center">
-                <div class="text-center text-white d-flex flex-column gap-2 px-3 py-4">
-                  <img class="mx-auto" src="assets/fishing.svg" alt="Fishing">
-                  <h6 class="fs-24 fw-bold yellow-text m-0">Excellent</h6>
-                  <p class="fs-14 m-0">Fishing <br>Conditions</p>
-                  <div class="fs-14 fw-bold yellow-text m-0">5:00 AM - 9:00 AM</div>
-                  <span class="fs-10 fw-medium m-0">Best Time to Fishing</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
     <!-- ! Weather Popup End -->
     <header class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5">
         <figure class="main-logo">
@@ -74,214 +79,224 @@
                 </ul>
             </nav>
             <div class="icon-group d-flex align-items-center gap-3">
-                <img  type="button" data-bs-toggle="modal" data-bs-target="#WeatherModal" src="assets/bag.svg" alt="Cart">
+                <img type="button" data-bs-toggle="modal" data-bs-target="#WeatherModal" src="assets/bag.svg"
+                    alt="Cart">
                 <img src="assets/heart.svg" alt="Wishlist">
                 <div class="dropdown notification-dropdown">
                     <img src="assets/notification-bing.svg" class="notification-icon" alt="Notification">
-                    
-                    <div class="dropdown-menu notification-menu">
-                      <img src="assets/Polygon.svg" class="position-absolute polygon-shape-2" alt="">
-                      
-                      <!-- Notification Items -->
-                      <div class="d-flex flex-column gap-3">
-                        <!-- Booking Confirmed -->
-                      <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                        <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                        <div class="">
-                            <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
-                            <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is confirmed!</p>
-                            <span class="position-absolute">1 hr ago</span>
-                        </div>
-                      </div>
-                      <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                        <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                        <div class="">
-                            <h5 class="fw-bold fs-14 mb-1">Upcoming Jet Ski Adventure</h5>
-                            <p class="m-0">reminder: Your Jet Ski session is scheduled for tomorrow, Saturday, November 4, 2023, at 10:30 AM.</p>
-                            <span class="position-absolute">1 hr ago</span>
-                        </div>
-                      </div>
-                      <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                        <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                        <div class="">
-                            <h5 class="fw-bold fs-14 mb-1">Safety Briefing Reminder</h5>
-                            <p class="m-0">Important: Please arrive by 10:15 AM on Saturday, November 4, 2023, for a safety briefing before your Jet Ski ride.</p>
-                            <span class="position-absolute">1 hr ago</span>
-                        </div>
-                      </div>
-                      <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                        <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                        <div class="">
-                            <h5 class="fw-bold fs-14 mb-1">Successful Payment</h5>
-                            <p class="m-0">Payment confirmed for your Jet Ski booking! Transaction ID: TX-456789. You’re all set for your session on Saturday, November 4, 2023, at 10:30 AM.</p>
-                            <span class="position-absolute">1 hr ago</span>
-                        </div>
-                      </div>
-                      <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                        <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                        <div class="">
-                            <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
-                            <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is confirmed!</p>
-                            <span class="position-absolute">1 hr ago</span>
-                        </div>
-                      </div>
 
-                      </div>
+                    <div class="dropdown-menu notification-menu">
+                        <img src="assets/Polygon.svg" class="position-absolute polygon-shape-2" alt="">
+
+                        <!-- Notification Items -->
+                        <div class="d-flex flex-column gap-3">
+                            <!-- Booking Confirmed -->
+                            <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                                <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                                <div class="">
+                                    <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
+                                    <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is
+                                        confirmed!</p>
+                                    <span class="position-absolute">1 hr ago</span>
+                                </div>
+                            </div>
+                            <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                                <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                                <div class="">
+                                    <h5 class="fw-bold fs-14 mb-1">Upcoming Jet Ski Adventure</h5>
+                                    <p class="m-0">reminder: Your Jet Ski session is scheduled for tomorrow, Saturday,
+                                        November 4, 2023, at 10:30 AM.</p>
+                                    <span class="position-absolute">1 hr ago</span>
+                                </div>
+                            </div>
+                            <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                                <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                                <div class="">
+                                    <h5 class="fw-bold fs-14 mb-1">Safety Briefing Reminder</h5>
+                                    <p class="m-0">Important: Please arrive by 10:15 AM on Saturday, November 4, 2023,
+                                        for a safety briefing before your Jet Ski ride.</p>
+                                    <span class="position-absolute">1 hr ago</span>
+                                </div>
+                            </div>
+                            <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                                <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                                <div class="">
+                                    <h5 class="fw-bold fs-14 mb-1">Successful Payment</h5>
+                                    <p class="m-0">Payment confirmed for your Jet Ski booking! Transaction ID:
+                                        TX-456789. You’re all set for your session on Saturday, November 4, 2023, at
+                                        10:30 AM.</p>
+                                    <span class="position-absolute">1 hr ago</span>
+                                </div>
+                            </div>
+                            <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                                <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                                <div class="">
+                                    <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
+                                    <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is
+                                        confirmed!</p>
+                                    <span class="position-absolute">1 hr ago</span>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                  </div>
-                  
-                  
+                </div>
+
+
                 <div class="dropdown">
                     <img src="assets/account-img.jpg" class="user-icon rounded-circle" alt="User">
-                    
+
                     <div class="dropdown-menu profile-dropdown" style="width: 295px;">
-                      <img src="assets/Polygon.svg" class="position-absolute polygon-shape" alt="">
-                      <!-- User Info -->
-                      <div class="px-4 py-3 border-bottom">
-                        <div class="d-flex align-items-center gap-3">
-                          <img src="assets/account-img.jpg" class="dropdown-icon" alt="Profile">
-                          <div>
-                            <h6 class="mb-0 fw-bold fs-18">James Thomas</h6>
-                            <small class="text-muted">(219) 555-0114</small>
-                          </div>
+                        <img src="assets/Polygon.svg" class="position-absolute polygon-shape" alt="">
+                        <!-- User Info -->
+                        <div class="px-4 py-3 border-bottom">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="assets/account-img.jpg" class="dropdown-icon" alt="Profile">
+                                <div>
+                                    <h6 class="mb-0 fw-bold fs-18">James Thomas</h6>
+                                    <small class="text-muted">(219) 555-0114</small>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                  
-                      <!-- Menu Items -->
-                      <div class="py-2">
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                          <img src="assets/weather.svg" class="me-3" alt="Weather">
-                          Weather
+
+                        <!-- Menu Items -->
+                        <div class="py-2">
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/weather.svg" class="me-3" alt="Weather">
+                                Weather
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/calender.svg" class="me-3" alt="Booking History">
+                                Booking History
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/market-place.svg" class="me-3" alt="Market Places">
+                                Market Places
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/my-fav.svg" class="me-3" alt="My Favorites">
+                                My Favorites
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/rewards.svg" class="me-3" alt="Rewards">
+                                Rewards
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/edit-profile.svg" class="me-3" alt="Edit Profile">
+                                Edit Profile
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/payment-method.svg" class="me-3" alt="Payment Method">
+                                Payment Method
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/order-history.svg" class="me-3" alt="Order History">
+                                Order History
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/language.svg" class="me-3" alt="Language">
+                                Language
+                            </a>
+                            <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                                <img src="assets/seetings.svg" class="me-3" alt="Settings">
+                                Settings
+                            </a>
+                        </div>
+
+                        <!-- Logout -->
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item d-flex fw-bold align-items-center px-4 py-3 logout-btn">
+                            LOGOUT
                         </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/calender.svg" class="me-3" alt="Booking History">
-                          Booking History
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/market-place.svg" class="me-3" alt="Market Places">
-                          Market Places
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/my-fav.svg" class="me-3" alt="My Favorites">
-                          My Favorites
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/rewards.svg" class="me-3" alt="Rewards">
-                          Rewards
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/edit-profile.svg" class="me-3" alt="Edit Profile">
-                          Edit Profile
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/payment-method.svg" class="me-3" alt="Payment Method">
-                          Payment Method
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/order-history.svg" class="me-3" alt="Order History">
-                          Order History
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/language.svg" class="me-3" alt="Language">
-                          Language
-                        </a>
-                        <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                            <img src="assets/seetings.svg" class="me-3" alt="Settings">
-                          Settings
-                        </a>
-                      </div>
-                  
-                      <!-- Logout -->
-                      <div class="dropdown-divider"></div>
-                      <a href="#" class="dropdown-item d-flex fw-bold align-items-center px-4 py-3 logout-btn">
-                        LOGOUT
-                      </a>
                     </div>
-                  </div>
-                  
+                </div>
+
             </div>
         </div>
     </header>
     <!-- Mobile Header Start -->
     <div class="mobile-header d-none">
         <button class="menu-toggle">
-            <svg fill="#FFAF17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            <svg fill="#FFAF17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
         </button>
         <figure class="main-logo pt-2">
             <img class="mobile-logo" src="assets/bahri-main-logo.svg" alt="Bahri Logo">
         </figure>
         <!-- <img src="assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User"> -->
-        
+
 
         <div class="dropdown">
             <img src="assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User">
             <!-- Dropdown menu (same as desktop, it's repeated here for clarity) -->
-           
+
             <div class="dropdown-menu profile-dropdown" style="width: 295px;">
                 <img src="assets/Polygon.svg" class="position-absolute polygon-shape" alt="">
                 <!-- User Info -->
                 <div class="px-4 py-3 border-bottom">
-                  <div class="d-flex align-items-center gap-3">
-                    <img src="assets/account-img.jpg" class="dropdown-icon" alt="Profile">
-                    <div>
-                      <h6 class="mb-0 fw-bold fs-18">James Thomas</h6>
-                      <small class="text-muted">(219) 555-0114</small>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/account-img.jpg" class="dropdown-icon" alt="Profile">
+                        <div>
+                            <h6 class="mb-0 fw-bold fs-18">James Thomas</h6>
+                            <small class="text-muted">(219) 555-0114</small>
+                        </div>
                     </div>
-                  </div>
                 </div>
-            
+
                 <!-- Menu Items -->
                 <div class="py-2">
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                    <img src="assets/weather.svg" class="me-3" alt="Weather">
-                    Weather
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/calender.svg" class="me-3" alt="Booking History">
-                    Booking History
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/market-place.svg" class="me-3" alt="Market Places">
-                    Market Places
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/my-fav.svg" class="me-3" alt="My Favorites">
-                    My Favorites
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/rewards.svg" class="me-3" alt="Rewards">
-                    Rewards
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/edit-profile.svg" class="me-3" alt="Edit Profile">
-                    Edit Profile
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/payment-method.svg" class="me-3" alt="Payment Method">
-                    Payment Method
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/order-history.svg" class="me-3" alt="Order History">
-                    Order History
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/language.svg" class="me-3" alt="Language">
-                    Language
-                  </a>
-                  <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
-                      <img src="assets/seetings.svg" class="me-3" alt="Settings">
-                    Settings
-                  </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/weather.svg" class="me-3" alt="Weather">
+                        Weather
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/calender.svg" class="me-3" alt="Booking History">
+                        Booking History
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/market-place.svg" class="me-3" alt="Market Places">
+                        Market Places
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/my-fav.svg" class="me-3" alt="My Favorites">
+                        My Favorites
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/rewards.svg" class="me-3" alt="Rewards">
+                        Rewards
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/edit-profile.svg" class="me-3" alt="Edit Profile">
+                        Edit Profile
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/payment-method.svg" class="me-3" alt="Payment Method">
+                        Payment Method
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/order-history.svg" class="me-3" alt="Order History">
+                        Order History
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/language.svg" class="me-3" alt="Language">
+                        Language
+                    </a>
+                    <a href="#" class="dropdown-item d-flex align-items-center px-4 py-2">
+                        <img src="assets/seetings.svg" class="me-3" alt="Settings">
+                        Settings
+                    </a>
                 </div>
-            
+
                 <!-- Logout -->
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item d-flex fw-bold align-items-center px-4 py-3 logout-btn">
-                  LOGOUT
+                    LOGOUT
                 </a>
-              </div>
-          </div>
-        
+            </div>
+        </div>
+
 
     </div>
     <div class="off-canvas">
@@ -298,7 +313,8 @@
                 <span class="icon-wrapper border-end pe-1 border-dark">
                     <img src="assets/global-search.svg" alt="Search what you want?">
                 </span>
-                <input type="search" class="form-control search-input d-lg-none d-block" placeholder="Search what you want?">
+                <input type="search" class="form-control search-input d-lg-none d-block"
+                    placeholder="Search what you want?">
             </div>
         </div>
         <div class="icon-group d-flex align-items-center justify-content-center gap-3">
@@ -307,67 +323,72 @@
             <!-- <img src="assets/notification-bing.svg" alt="Notification"> -->
             <div class="dropdown notification-dropdown">
                 <img src="assets/notification-bing.svg" class="notification-icon" alt="Notification">
-                
-                <div class="dropdown-menu notification-menu">
-                  <img src="assets/Polygon.svg" class="position-absolute polygon-shape-2" alt="">
-                  
-                  <!-- Notification Items -->
-                  <div class="d-flex flex-column gap-3">
-                    <!-- Booking Confirmed -->
-                  <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                    <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                    <div class="">
-                        <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
-                        <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is confirmed!</p>
-                        <span class="position-absolute">1 hr ago</span>
-                    </div>
-                  </div>
-                  <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                    <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                    <div class="">
-                        <h5 class="fw-bold fs-14 mb-1">Upcoming Jet Ski Adventure</h5>
-                        <p class="m-0">reminder: Your Jet Ski session is scheduled for tomorrow, Saturday, November 4, 2023, at 10:30 AM.</p>
-                        <span class="position-absolute">1 hr ago</span>
-                    </div>
-                  </div>
-                  <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                    <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                    <div class="">
-                        <h5 class="fw-bold fs-14 mb-1">Safety Briefing Reminder</h5>
-                        <p class="m-0">Important: Please arrive by 10:15 AM on Saturday, November 4, 2023, for a safety briefing before your Jet Ski ride.</p>
-                        <span class="position-absolute">1 hr ago</span>
-                    </div>
-                  </div>
-                  <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                    <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                    <div class="">
-                        <h5 class="fw-bold fs-14 mb-1">Successful Payment</h5>
-                        <p class="m-0">Payment confirmed for your Jet Ski booking! Transaction ID: TX-456789. You’re all set for your session on Saturday, November 4, 2023, at 10:30 AM.</p>
-                        <span class="position-absolute">1 hr ago</span>
-                    </div>
-                  </div>
-                  <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
-                    <img src="assets/confirmend.svg" alt="Booking Confirmed">
-                    <div class="">
-                        <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
-                        <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is confirmed!</p>
-                        <span class="position-absolute">1 hr ago</span>
-                    </div>
-                  </div>
 
-                  </div>
+                <div class="dropdown-menu notification-menu">
+                    <img src="assets/Polygon.svg" class="position-absolute polygon-shape-2" alt="">
+
+                    <!-- Notification Items -->
+                    <div class="d-flex flex-column gap-3">
+                        <!-- Booking Confirmed -->
+                        <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                            <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                            <div class="">
+                                <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
+                                <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is
+                                    confirmed!</p>
+                                <span class="position-absolute">1 hr ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                            <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                            <div class="">
+                                <h5 class="fw-bold fs-14 mb-1">Upcoming Jet Ski Adventure</h5>
+                                <p class="m-0">reminder: Your Jet Ski session is scheduled for tomorrow, Saturday,
+                                    November 4, 2023, at 10:30 AM.</p>
+                                <span class="position-absolute">1 hr ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                            <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                            <div class="">
+                                <h5 class="fw-bold fs-14 mb-1">Safety Briefing Reminder</h5>
+                                <p class="m-0">Important: Please arrive by 10:15 AM on Saturday, November 4, 2023, for a
+                                    safety briefing before your Jet Ski ride.</p>
+                                <span class="position-absolute">1 hr ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                            <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                            <div class="">
+                                <h5 class="fw-bold fs-14 mb-1">Successful Payment</h5>
+                                <p class="m-0">Payment confirmed for your Jet Ski booking! Transaction ID: TX-456789.
+                                    You’re all set for your session on Saturday, November 4, 2023, at 10:30 AM.</p>
+                                <span class="position-absolute">1 hr ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-box position-relative d-flex align-items-center gap-2 m-0">
+                            <img src="assets/confirmend.svg" alt="Booking Confirmed">
+                            <div class="">
+                                <h5 class="fw-bold fs-14 mb-1">Booking Confirmed</h5>
+                                <p class="m-0">Your Jet Ski booking for Saturday, November 4, 2023, at 10:30 AM is
+                                    confirmed!</p>
+                                <span class="position-absolute">1 hr ago</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
     <!-- Mobile Header End -->
     <main class="bg-white py-5">
-        <section class="d-flex">
-            <div class="filter-block border border-danger py-2 px-4">
+        <section class="d-flex flex-column flex-lg-row">
+            <div class="filter-block py-2 px-4">
                 <div class="filter-header">
                     <h2>Filters</h2>
                 </div>
-        
+    
                 <div class="filter-section">
                     <h3 class="fw-bold">Services</h3>
                     <div class="checkbox-group">
@@ -402,7 +423,7 @@
                     </div>
                     <a href="#" class="show-all">SHOW ALL</a>
                 </div>
-        
+    
                 <div class="filter-section">
                     <h3 class="fw-bold">Select Price Range</h3>
                     <div class="price-range">
@@ -413,18 +434,19 @@
                         </div>
                     </div>
                 </div>
-        
+    
                 <div class="filter-section">
                     <h3 class="fw-bold">Rating</h3>
                     <div class="size-options">
-                        <button class="option-btn">5 Star <img src="assets/blue-star.svg" alt="Start"></button>
-                        <button class="option-btn active d-flex align-items-center justify-content-center gap-1">4 Star <img src="assets/blue-star.svg" alt="Start"></button>
-                        <button class="option-btn">3 Star <img src="assets/blue-star.svg" alt="Start"></button>
-                        <button class="option-btn">2 Star <img src="assets/blue-star.svg" alt="Start"></button>
-                        <button class="option-btn">1 Star <img src="assets/blue-star.svg" alt="Start"></button>
+                        <button class="option-btn">5 Star <img src="assets/blue-star.svg" alt="Star"></button>
+                        <button class="option-btn active d-flex align-items-center justify-content-center gap-1">4 Star
+                            <img src="assets/blue-star.svg" alt="Star"></button>
+                        <button class="option-btn">3 Star <img src="assets/blue-star.svg" alt="Star"></button>
+                        <button class="option-btn">2 Star <img src="assets/blue-star.svg" alt="Star"></button>
+                        <button class="option-btn">1 Star <img src="assets/blue-star.svg" alt="Star"></button>
                     </div>
                 </div>
-        
+    
                 <div class="filter-section">
                     <h3 class="fw-bold">Sizes</h3>
                     <div class="size-options">
@@ -433,7 +455,7 @@
                         <button class="option-btn">Large</button>
                     </div>
                 </div>
-        
+    
                 <div class="filter-section">
                     <h3>Session Time</h3>
                     <div class="time-options">
@@ -442,7 +464,7 @@
                         <button class="option-btn">04:00 - 06:00</button>
                     </div>
                 </div>
-        
+    
                 <div class="filter-section">
                     <h3>Type</h3>
                     <div class="type-options">
@@ -458,400 +480,841 @@
                     </div>
                 </div>
             </div>
-            <div class="services-block border border-danger py-2 px-4">
+            <div class="services-block py-2 px-4">
                 <section>
-                <div class="container img-card service-testimonial d-flex align-items-center p-5">
-                    <div class="hero-content-box">
-                        <h2 class="text-white baloo">Special Discounts <br> Just for You!</h2>
-                        <button class="yellow-btn">Explore Now</button>
+                    <div id="specialDiscountCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container img-card service-testimonial d-flex align-items-center p-5">
+                                    <div class="hero-content-box">
+                                        <h2 class="text-white baloo">Special Discounts <br> Just for You!</h2>
+                                        <button class="yellow-btn">Explore Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container img-card service-testimonial d-flex align-items-center p-5">
+                                    <div class="hero-content-box">
+                                        <h2 class="text-white baloo">Roshan Discounts <br> Just for You!</h2>
+                                        <button class="yellow-btn">Explore Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container img-card service-testimonial d-flex align-items-center p-5">
+                                    <div class="hero-content-box">
+                                        <h2 class="text-white baloo">Ankit Discounts <br> Just for You!</h2>
+                                        <button class="yellow-btn">Explore Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="d-flex align-items-baseline justify-content-center py-2 gap-3">
-                    <button class="next-prev-btn rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                    <div class="d-flex gap-2 justify-content-center ">
-                        <div class="active-dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                      </div>
-                    <button class="next-prev-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                </div>
-            </section>
-
+                    <div class="d-flex justify-content-center py-2">
+                        <button class="next-prev-btn rotate-btn d-flex align-items-center justify-content-center"
+                            type="button" data-bs-target="#specialDiscountCarousel" data-bs-slide="prev">
+                            <img src="assets/arrow-left-blue.svg" alt="Previous">
+                        </button>
+                        <div class="carousel-indicators position-static mx-4">
+                            <button type="button" data-bs-target="#specialDiscountCarousel" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#specialDiscountCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#specialDiscountCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <button class="next-prev-btn d-flex align-items-center justify-content-center" type="button"
+                            data-bs-target="#specialDiscountCarousel" data-bs-slide="next">
+                            <img src="assets/arrow-left-blue.svg" alt="Next">
+                        </button>
+                    </div>
+                </section>
+    
                 <section class="container py-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h3 class="h3-heading">Marine Equipment</h3>
                         <div class="d-flex gap-2">
-                    <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                    <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-
+                            <button
+                                class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                type="button" data-bs-target="#marineEquipmentCarousel" data-bs-slide="prev">
+                                <img src="assets/arrow-left-blue.svg" alt="Previous">
+                            </button>
+                            <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                type="button" data-bs-target="#marineEquipmentCarousel" data-bs-slide="next">
+                                <img src="assets/arrow-left-blue.svg" alt="Next">
+                            </button>
                         </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top-rental-1.png" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Boat Rent</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                    <div id="marineEquipmentCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                    <div class="col">
+                                        <div class="card-style-3">
+                                            <figure class="mb-3">
+                                                <img src="assets/top-rental-1.png" alt="Top Rentals" class="img-fluid">
+                                            </figure>
+                                            <div class="text-black text-center">
+                                                <h4 class="fs-18 fw-bold mb-1">Boat Rent</h4>
+                                                <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-style-3">
+                                            <figure class="mb-3">
+                                                <img src="assets/top=rental-2.jpg" alt="Top Rentals" class="img-fluid">
+                                            </figure>
+                                            <div class="text-black text-center">
+                                                <h4 class="fs-18 fw-bold mb-1">Jet SKI</h4>
+                                                <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-style-3">
+                                            <figure class="mb-3">
+                                                <img src="assets/top-rental-3.jpg" alt="Top Rentals" class="img-fluid">
+                                            </figure>
+                                            <div class="text-black text-center">
+                                                <h4 class="fs-18 fw-bold mb-1">Marine Boxes</h4>
+                                                <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top=rental-2.jpg" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Jet SKI</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top-rental-3.jpg" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Marine Boxes</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top-rental-4.jpg" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Fishing Gear</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                            <div class="carousel-item">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                    <div class="col">
+                                        <div class="card-style-3">
+                                            <figure class="mb-3">
+                                                <img src="assets/top-rental-4.jpg" alt="Top Rentals" class="img-fluid">
+                                            </figure>
+                                            <div class="text-black text-center">
+                                                <h4 class="fs-18 fw-bold mb-1">Fishing Gear</h4>
+                                                <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-style-3">
+                                            <figure class="mb-3">
+                                                <img src="assets/top-rental-4.jpg" alt="Top Rentals" class="img-fluid">
+                                            </figure>
+                                            <div class="text-black text-center">
+                                                <h4 class="fs-18 fw-bold mb-1">Fishing Gear</h4>
+                                                <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card-style-3">
+                                            <figure class="mb-3">
+                                                <img src="assets/top-rental-4.jpg" alt="Top Rentals" class="img-fluid">
+                                            </figure>
+                                            <div class="text-black text-center">
+                                                <h4 class="fs-18 fw-bold mb-1">Fishing Gear</h4>
+                                                <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+    
                 <section class="container pt-5 py-4 position-relative">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h3 class="h3-heading">Fresh & Frozen Fish</h3>
-                        <div class="d-flex gap-2">
-                            <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                            <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="h3-heading">Fresh & Frozen Fish</h3>
+                            <div class="d-flex gap-2">
+                                <button
+                                    class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#freshFrozenFishCarousel" data-bs-slide="prev">
+                                    <img src="assets/arrow-left-blue.svg" alt="Previous">
+                                </button>
+                                <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#freshFrozenFishCarousel" data-bs-slide="next">
+                                    <img src="assets/arrow-left-blue.svg" alt="Next">
+                                </button>
+                            </div>
+                        </div>
+                        <div id="freshFrozenFishCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row row-cols-1 row-cols-md-5 g-4">
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/services-img1.jpg" alt="Equipment" class="img-fluid">
+                                                <h5 class="mt-2">Equipment</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-2.jpg" alt="Rentals" class="img-fluid">
+                                                <h5 class="mt-2">Rentals</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-3.jpg" alt="Tours" class="img-fluid">
+                                                <h5 class="mt-2">Tours</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-4.jpg" alt="Catering" class="img-fluid">
+                                                <h5 class="mt-2">Catering</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-5.jpg" alt="Swimming Clubs" class="img-fluid">
+                                                <h5 class="mt-2">Swimming Clubs</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-4">
-                        <div class="col">
-                            <div class="card-style">
-                                <img src="assets/services-img1.jpg" alt="Equipment" class="img-fluid">
-                                <h5 class="mt-2">Equipment</h5>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style">
-                                <img src="assets/service-2.jpg" alt="Rentals" class="img-fluid">
-                                <h5 class="mt-2">Rentals</h5>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style">
-                                <img src="assets/service-3.jpg" alt="Tours" class="img-fluid">
-                                <h5 class="mt-2">Tours</h5>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style">
-                                <img src="assets/service-4.jpg" alt="Catering" class="img-fluid">
-                                <h5 class="mt-2">Catering</h5>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style">
-                                <img src="assets/service-5.jpg" alt="Swimming Clubs" class="img-fluid">
-                                <h5 class="mt-2">Swimming Clubs</h5>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style">
-                                <img src="assets/service-6.jpg" alt="Special Boat" class="img-fluid">
-                                <h5 class="mt-2">Special Boat</h5>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="container py-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h3 class="h3-heading">Chalets, Boats & Marinas Rental</h3>
-                        <div class="d-flex gap-2">
-                            <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                            <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                                </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-2 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-4 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> 
-                <section class="container py-4 position-relative z-3">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h3 class="h3-heading">Sea Tours</h3>
-                        <div class="d-flex gap-2">
-                            <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                            <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                                </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        <div class="col">
-                            <div class="catering-item catering-1 d-flex flex-column align-items-end justify-content-end">
-                                <div class="text-center text-white">
-                                    <h4 class="fs-18 fw-bold">Wedding Catering</h4>
-                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering for weddings, featuring customized menus and professional staff.</p>
-                                </div>
-                                <div class="catering-price text-black text-center fs-12 fw-semibold mx-auto">Starting at $50 per guest</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="catering-item catering-2 d-flex flex-column align-items-end justify-content-end">
-                                <div class="text-center text-white">
-                                    <h4 class="fs-18 fw-bold">BBQ Beach Party</h4>
-                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering for weddings, featuring customized menus and professional staff.</p>
-                                </div>
-                                <div class="catering-price text-black text-center fs-12 fw-semibold mx-auto">Starting at $50 per guest</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="catering-item catering-3 d-flex flex-column align-items-end justify-content-end">
-                                <div class="text-center text-white">
-                                    <h4 class="fs-18 fw-bold">Sea Food Catering</h4>
-                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering for weddings, featuring customized menus and professional staff.</p>
-                                </div>
-                                <div class="catering-price text-black text-center fs-12 fw-semibold mx-auto">Starting at $50 per guest</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="container py-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h3 class="h3-heading">Catering Service</h3>
-                        <div class="d-flex gap-2">
-                            <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                            <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                                </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
+                                <div class="carousel-item">
+                                    <div class="row row-cols-1 row-cols-md-5 g-4">
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/services-img1.jpg" alt="Equipment 2" class="img-fluid">
+                                                <h5 class="mt-2">Equipment 2</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-2.jpg" alt="Rentals 2" class="img-fluid">
+                                                <h5 class="mt-2">Rentals 2</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-3.jpg" alt="Tours 2" class="img-fluid">
+                                                <h5 class="mt-2">Tours 2</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-4.jpg" alt="Catering 2" class="img-fluid">
+                                                <h5 class="mt-2">Catering 2</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style">
+                                                <img src="assets/service-5.jpg" alt="Swimming Clubs 2" class="img-fluid">
+                                                <h5 class="mt-2">Swimming Clubs 2</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-2 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
+                    </section>
+    
+                    <section class="container py-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="h3-heading">Chalets, Boats & Marinas Rental</h3>
+                            <div class="d-flex gap-2">
+                                <button
+                                    class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#chaletsBoatsCarousel" data-bs-slide="prev">
+                                    <img src="assets/arrow-left-blue.svg" alt="Previous">
+                                </button>
+                                <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#chaletsBoatsCarousel" data-bs-slide="next">
+                                    <img src="assets/arrow-left-blue.svg" alt="Next">
+                                </button>
+                            </div>
+                        </div>
+                        <div id="chaletsBoatsCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-4 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Beach Resort</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Bali
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Mountain Retreat</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Switzerland
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-4 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">City Escape</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> New York
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
+                    </section>
+    
+                    <section class="container py-4 position-relative z-3">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="h3-heading">Sea Tours</h3>
+                            <div class="d-flex gap-2">
+                                <button
+                                    class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#seaToursCarousel" data-bs-slide="prev">
+                                    <img src="assets/arrow-left-blue.svg" alt="Previous">
+                                </button>
+                                <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#seaToursCarousel" data-bs-slide="next">
+                                    <img src="assets/arrow-left-blue.svg" alt="Next">
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div id="seaToursCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-1 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Wedding Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-2 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">BBQ Beach Party</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-3 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Sea Food Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-1 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Wedding Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-2 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">BBQ Beach Party</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-3 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Sea Food Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-4 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
+                    </section>
+    
+                    <section class="container py-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="h3-heading">Catering Service</h3>
+                            <div class="d-flex gap-2">
+                                <button
+                                    class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#cateringServiceCarousel" data-bs-slide="prev">
+                                    <img src="assets/arrow-left-blue.svg" alt="Previous">
+                                </button>
+                                <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#cateringServiceCarousel" data-bs-slide="next">
+                                    <img src="assets/arrow-left-blue.svg" alt="Next">
+                                </button>
+                            </div>
+                        </div>
+                        <div id="cateringServiceCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-4 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-2 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-4 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section> 
-                <section class="container py-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h3 class="h3-heading">Swimming Clubs</h3>
-                        <div class="d-flex gap-2">
-                    <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                    <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-
+    
+                    </section>
+    
+                    <section class="container py-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="h3-heading">Swimming Clubs</h3>
+                            <div class="d-flex gap-2">
+                                <button
+                                    class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#swimmingClubsCarousel" data-bs-slide="prev">
+                                    <img src="assets/arrow-left-blue.svg" alt="Previous">
+                                </button>
+                                <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#swimmingClubsCarousel" data-bs-slide="next">
+                                    <img src="assets/arrow-left-blue.svg" alt="Next">
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top-rental-1.png" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Boat Rent</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+    
+                        <div id="swimmingClubsCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-3">
+                                                <figure class="mb-3">
+                                                    <img src="assets/top-rental-1.png" alt="Top Rentals" class="img-fluid">
+                                                </figure>
+                                                <div class="text-black text-center">
+                                                    <h4 class="fs-18 fw-bold mb-1">Boat Rent</h4>
+                                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-3">
+                                                <figure class="mb-3">
+                                                    <img src="assets/top=rental-2.jpg" alt="Top Rentals" class="img-fluid">
+                                                </figure>
+                                                <div class="text-black text-center">
+                                                    <h4 class="fs-18 fw-bold mb-1">Jet SKI</h4>
+                                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-3">
+                                                <figure class="mb-3">
+                                                    <img src="assets/top-rental-3.jpg" alt="Top Rentals" class="img-fluid">
+                                                </figure>
+                                                <div class="text-black text-center">
+                                                    <h4 class="fs-18 fw-bold mb-1">Marine Boxes</h4>
+                                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-3">
+                                                <figure class="mb-3">
+                                                    <img src="assets/top-rental-1.png" alt="Top Rentals" class="img-fluid">
+                                                </figure>
+                                                <div class="text-black text-center">
+                                                    <h4 class="fs-18 fw-bold mb-1">Boat Rent</h4>
+                                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-3">
+                                                <figure class="mb-3">
+                                                    <img src="assets/top=rental-2.jpg" alt="Top Rentals" class="img-fluid">
+                                                </figure>
+                                                <div class="text-black text-center">
+                                                    <h4 class="fs-18 fw-bold mb-1">Jet SKI</h4>
+                                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-3">
+                                                <figure class="mb-3">
+                                                    <img src="assets/top-rental-3.jpg" alt="Top Rentals" class="img-fluid">
+                                                </figure>
+                                                <div class="text-black text-center">
+                                                    <h4 class="fs-18 fw-bold mb-1">Marine Boxes</h4>
+                                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top=rental-2.jpg" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Jet SKI</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+    
+                    </section>
+    
+                    <section class="container py-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="h3-heading">Maintenance Services</h3>
+                            <div class="d-flex gap-2">
+                                <button
+                                    class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#maintenanceServicesCarousel" data-bs-slide="prev">
+                                    <img src="assets/arrow-left-blue.svg" alt="Previous">
+                                </button>
+                                <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#maintenanceServicesCarousel" data-bs-slide="next">
+                                    <img src="assets/arrow-left-blue.svg" alt="Next">
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div id="maintenanceServicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-2 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-2 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
+                                                <div class="position-absolute card-text">
+                                                    <h4 class="fw-bold text-white">Island Adventure</h4>
+                                                    <div
+                                                        class="fs-10 text-white opacity-50 d-flex align-items-center gap-1">
+                                                        <img src="assets/location.svg" alt="Location"> Maldives</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top-rental-3.jpg" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Marine Boxes</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
+                    </section>
+    
+                    <section class="container py-4 position-relative z-3">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h3 class="h3-heading">Yoga & Relaxation Sessions</h3>
+                            <div class="d-flex gap-2">
+                                <button
+                                    class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#yogaRelaxationCarousel" data-bs-slide="prev">
+                                    <img src="assets/arrow-left-blue.svg" alt="Previous">
+                                </button>
+                                <button class="next-prev-btn-big d-flex align-items-center justify-content-center"
+                                    type="button" data-bs-target="#yogaRelaxationCarousel" data-bs-slide="next">
+                                    <img src="assets/arrow-left-blue.svg" alt="Next">
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div id="yogaRelaxationCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-1 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Wedding Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-2 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">BBQ Beach Party</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-3 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Sea Food Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-1 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Wedding Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-2 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">BBQ Beach Party</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div
+                                                class="catering-item catering-3 d-flex flex-column align-items-end justify-content-end">
+                                                <div class="text-center text-white">
+                                                    <h4 class="fs-18 fw-bold">Sea Food Catering</h4>
+                                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering
+                                                        for weddings, featuring customized menus and professional staff.</p>
+                                                </div>
+                                                <div
+                                                    class="catering-price text-black text-center fs-12 fw-semibold mx-auto">
+                                                    Starting at $50 per guest</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card-style-3">
-                                <figure class="mb-3">
-                                    <img src="assets/top-rental-4.jpg" alt="Top Rentals" class="img-fluid">
-                                </figure>
-                                <div class="text-black text-center">
-                                    <h4 class="fs-18 fw-bold mb-1">Fishing Gear</h4>
-                                    <p class="fs-12 fw-semibold">Starting at $250/day</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="container py-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h3 class="h3-heading">Maintenance Services</h3>
-                        <div class="d-flex gap-2">
-                            <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                            <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                                </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-1 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-2 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-3 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card-style-2 trip-tour trip-tour-4 position-relative">
-                                <div class="position-absolute card-text">
-                                    <h4 class="fw-bold text-white">Island Adventure</h4>
-                                    <div class="fs-10 text-white opacity-50 d-flex align-items-center gap-1"><img src="assets/location.svg" alt="Location"> Maldives</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> 
-                <section class="container py-4 position-relative z-3">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h3 class="h3-heading">Yoga & Relaxation Sessions</h3>
-                        <div class="d-flex gap-2">
-                            <button class="next-prev-btn-big rotate-btn d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                            <button class="next-prev-btn-big d-flex align-items-center justify-content-center"><img src="assets/arrow-left-blue.svg" alt=""></button>
-                                </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                        <div class="col">
-                            <div class="catering-item catering-1 d-flex flex-column align-items-end justify-content-end">
-                                <div class="text-center text-white">
-                                    <h4 class="fs-18 fw-bold">Wedding Catering</h4>
-                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering for weddings, featuring customized menus and professional staff.</p>
-                                </div>
-                                <div class="catering-price text-black text-center fs-12 fw-semibold mx-auto">Starting at $50 per guest</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="catering-item catering-2 d-flex flex-column align-items-end justify-content-end">
-                                <div class="text-center text-white">
-                                    <h4 class="fs-18 fw-bold">BBQ Beach Party</h4>
-                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering for weddings, featuring customized menus and professional staff.</p>
-                                </div>
-                                <div class="catering-price text-black text-center fs-12 fw-semibold mx-auto">Starting at $50 per guest</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="catering-item catering-3 d-flex flex-column align-items-end justify-content-end">
-                                <div class="text-center text-white">
-                                    <h4 class="fs-18 fw-bold">Sea Food Catering</h4>
-                                    <p class="fs-10 fw-semibold px-3 px-sm-5">Elegant, full-service catering for weddings, featuring customized menus and professional staff.</p>
-                                </div>
-                                <div class="catering-price text-black text-center fs-12 fw-semibold mx-auto">Starting at $50 per guest</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+            
             </div>
         </section>
     </main>
-     <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
                     <img src="assets/bahri-main-logo.svg" alt="Bahri Logo" class="footer-logo">
                     <p class="footer-description">
-                        Welcome to Bahri – your gateway to unforgettable marine experiences! At Bahri, we specialize in marine equipment and boat rentals, along with a wide range of services to enhance your time on the water. Whether you're looking to embark on a scenic tour, book a thrilling trip, or find the perfect equipment for your marine adventures, Bahri has you covered!
+                        Welcome to Bahri – your gateway to unforgettable marine experiences! At Bahri, we specialize in
+                        marine equipment and boat rentals, along with a wide range of services to enhance your time on
+                        the water. Whether you're looking to embark on a scenic tour, book a thrilling trip, or find the
+                        perfect equipment for your marine adventures, Bahri has you covered!
                     </p>
                     <div class="social-icons">
                         <a href="#"><i class="fa-brands social-icon fa-facebook"></i></a>
@@ -860,7 +1323,7 @@
                         <a href="#"><i class="fa-brands social-icon fa-twitter"></i></i></a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5>Pages</h5>
                     <ul class="footer-links">
@@ -875,9 +1338,9 @@
                     <h5>CONTACT INFO</h5>
                     <div class="contact-info">
                         <p>Address:<br>
-                        Budapest Hungry, 1054</p>
+                            Budapest Hungry, 1054</p>
                         <p>Email:<br>
-                        info@leaderfaory.com</p>
+                            info@leaderfaory.com</p>
                     </div>
                 </div>
             </div>
@@ -891,4 +1354,5 @@
     <script src="JS/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
