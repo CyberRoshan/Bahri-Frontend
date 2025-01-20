@@ -1293,6 +1293,9 @@ input[type="checkbox"]:checked::after {
 .blue-text {
   color: var(--primary-blue);
 }
+.light-blue-text{
+  color: var(--light-shade);
+}
 .booking-date {
   font-size: 16px;
   color: #ea4335;
@@ -1645,7 +1648,7 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 10px;
 }
 .fs-22{
-  font-size: 22px;
+  font-size: 22px !important;
 }
 .contact-btn{
   width: 162px;
@@ -1709,4 +1712,258 @@ input[type="checkbox"]:checked::after {
 }
 #fileInput {
   display: none;
+}
+
+
+.all-booking {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.booking-date-block {
+  flex-basis: 40%;
+}
+
+.booking-card-block {
+  flex-basis: 60%;
+}
+
+/* Calendar Styles */
+.wrapper {
+  background: #fff;
+  max-width: 360px;
+  width: 100%;
+  border-radius: 27px;
+  border: 1px solid var(--light-shade);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+  padding: 30px;
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 0 0 30px;
+  justify-content: space-between;
+}
+
+.current-date {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icons span {
+  width: 38px;
+  height: 38px;
+  color: #939393;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icons span:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.calendar {
+  padding: 0;
+}
+
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.calendar .weeks {
+  margin-bottom: 20px;
+}
+
+.calendar .weeks li {
+  font-weight: 600;
+  color: black;
+}
+
+.calendar ul li {
+  position: relative;
+  width: calc(100% / 7);
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar .days li {
+  margin-top: 30px;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.highlight {
+  color: var(--primary-orange);
+  font-weight: 500;
+}
+
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.days li:hover::before {
+  background: #f0f0f0;
+}
+
+.days li.highlight::before {
+  background: rgba(255, 140, 0, 0.1);
+}
+
+.icons i:hover {
+  color: var(--primary-blue);
+}
+
+@media (max-width: 991px) {
+  .booking-date-block,
+  .booking-card-block {
+    flex-basis: 100%;
+  }
+
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 20px;
+  }
+  
+  .current-date {
+    font-size: 20px;
+  }
+  
+  .calendar .weeks li,
+  .calendar .days li {
+    font-size: 14px;
+  }
+
+  .icons span {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .calendar .weeks li,
+  .calendar .days li {
+    font-size: 12px;
+  }
+
+  .calendar .days li::before {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+
+
+.time-slot-btn{
+  border-radius: 17px;
+  padding: 18px 20px;
+  border: none;
+  background-color: var(--light-shade);
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+.blue-active{
+  color: white;
+  font-weight: 700;
+  background-color: var(--primary-blue);
+}
+
+.calender-popup{
+  border-radius: 0px;
+  border-top: 1px solid var(--light-shade);
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  border-left: 2px dashed var(--primary-blue);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -54px;
+  width: 30px;
+  height: 30px;
+  border: 6px solid var(--light-shade);
+  background-color: var(--primary-blue);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.fav-btn-85{
+  flex-basis: 85%;
 }

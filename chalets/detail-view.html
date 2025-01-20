@@ -5,113 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <title>Home | Bahri</title>
 </head>
 <body>
-    <!-- ! Cancel Booking Popup Start -->
-    <div
-    class="modal fade"
-    id="CancelBookingModal"
-    tabindex="-1"
-    aria-labelledby="CancelBookingModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div
-        class="modal-content flex-column mx-auto gap-3 py-4 px-4 invoice-modal text-center bg-white position-relative"
-      >
-        <button
-          type="button"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-          class="popup-close-btn position-absolute end-0 top-0"
-        >
-          <img src="assets/close-icon.svg" alt="Close" />
-        </button>
-        <div>
-          <div class="d-flex flex-column gap-2">
-            <img class="cancel-booking-img" src="assets/calendar-remove.svg" alt="Cancel Booking" />
-            <h4 class="fw-bold blue-text fs-30" id="CancelBookingModalLabel">Cancel Booking</h4>
-            <p class="">
-                Are you sure you want to cancel the booking? If you select 'Yes,' your payment will be refunded within 5-7 working days and will be automatically credited back to the payment method you used.
-            </p>
-            <button class="add-cart-btn w-100">YES</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- ! Cancel Booking Popup End -->
-    <!-- ! Reschedule Booking Popup Start -->
-    <div
-    class="modal fade"
-    id="RescheduleBookingModal"
-    tabindex="-1"
-    aria-labelledby="RescheduleBookingModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div
-        class="modal-content flex-column mx-auto gap-3 py-4 px-4 invoice-modal text-center bg-white position-relative"
-      >
-        <button
-          type="button"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-          class="popup-close-btn position-absolute end-0 top-0"
-        >
-          <img src="assets/close-icon.svg" alt="Close" />
-        </button>
-        <div>
-          <div class="d-flex flex-column gap-2">
-            <h4 class="fw-bold blue-text fs-30" id="RescheduleBookingModalLabel">Reschedule <br> Booking</h4>
-            <p class="text-start">
-                Please select a new date and time to reschedule your booking. Your current booking is set for <b>September 8 at 10:30 AM.</b>
-            </p>
-            <div class="wrapper calender-popup px-0 py-2">
-                <header>
-                  <p class="current-date m-0"></p>
-                  <div class="icons">
-                    <span id="prevIcon"><i class="fa-solid fa-angle-left light-blue-text"></i></span>
-                    <span id="nextIcon"><i class="fa-solid fa-angle-right blue-text"></i></span>
-                  </div>
-                </header>
-                <div class="calendar">
-                  <ul class="weeks">
-                    <li>Mo</li>
-                    <li>Tu</li>
-                    <li>We</li>
-                    <li>Th</li>
-                    <li>Fr</li>
-                    <li>Sa</li>
-                    <li>Su</li>
-                  </ul>
-                  <ul class="days"></ul>
-                </div>
-              </div>
-            <div class="filter-section text-start">
-                <h3>Select Time Slot</h3>
-                <div class="time-options">
-                    <button class="time-slot-btn blue-active">09:00 AM</button>
-                    <button class="time-slot-btn">02:00 PM</button>
-                    <button class="time-slot-btn">04:00 PM</button>
-                    <button class="time-slot-btn">04:00 PM</button>
-                    <button class="time-slot-btn">04:00 PM</button>
-                </div>
-            </div>
-            <button class="add-cart-btn w-100">Reschedule</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- ! Reschedule Booking Popup End -->
-    <img class="position-absolute top-0 start-0 d-lg-block d-none" src="assets/shape-1.svg" alt="">
+     <!-- !  Select Data Time Popup Start -->
+     <div
+     class="modal fade"
+     id="SelectDateTimeModal"
+     tabindex="-1"
+     aria-labelledby="SelectDateTimeModalLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog modal-dialog-centered">
+       <div
+         class="modal-content flex-column mx-auto gap-3 py-4 px-4 invoice-modal text-center bg-white position-relative"
+       >
+         <button
+           type="button"
+           data-bs-dismiss="modal"
+           aria-label="Close"
+           class="popup-close-btn position-absolute end-0 top-0"
+         >
+           <img src="../assets/close-icon.svg" alt="Close" />
+         </button>
+         <div>
+           <div class="d-flex flex-column gap-2">
+             <h4 class="fw-bold blue-text fs-30" id="SelectDateTimeModalLabel">Select Date</h4>
+             <div class="wrapper calender-popup px-0 py-2">
+                 <header>
+                   <p class="current-date m-0"></p>
+                   <div class="icons">
+                     <span id="prevIcon"><i class="fa-solid fa-angle-left light-blue-text"></i></span>
+                     <span id="nextIcon"><i class="fa-solid fa-angle-right blue-text"></i></span>
+                   </div>
+                 </header>
+                 <div class="calendar">
+                   <ul class="weeks">
+                     <li>Mo</li>
+                     <li>Tu</li>
+                     <li>We</li>
+                     <li>Th</li>
+                     <li>Fr</li>
+                     <li>Sa</li>
+                     <li>Su</li>
+                   </ul>
+                   <ul class="days"></ul>
+                 </div>
+               </div>
+             <div class="filter-section text-start">
+                 <h3>Select Row</h3>
+                 <div class="time-options">
+                     <button class="time-slot-btn blue-active">First Row</button>
+                     <button class="time-slot-btn">Second Row</button>
+                     <button class="time-slot-btn">Third Row</button>
+                 </div>
+             </div>
+             <div class="filter-section text-start">
+                 <h3>Select Phase</h3>
+                 <div class="time-options">
+                     <button class="time-slot-btn blue-active">Phase-01</button>
+                     <button class="time-slot-btn">Phase-02</button>
+                     <button class="time-slot-btn">Phase-03</button>
+                 </div>
+             </div>
+             <a href="../chalets/cart.html">
+                 <button class="add-cart-btn w-100">Next</button>
+             </a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+     <!-- ! Select Data Time Popup End -->
+    <img class="position-absolute top-0 start-0 d-lg-block d-none" src="../assets/shape-1.svg" alt="">
     <header class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5">
         <figure class="main-logo">
-            <img src="assets/bahri-main-logo.svg" alt="Bahri Logo">
+            <img src="../assets/bahri-main-logo.svg" alt="Bahri Logo">
         </figure>
         <div class="navigation-area d-flex align-items-center justify-content-between gap-3">
             <nav class="nav-links pt-2">
@@ -123,7 +94,7 @@
                     <li class="search-container">
                         <div class="position-relative py-4">
                             <span class="icon-wrapper border-end pe-1 border-dark">
-                                <img src="assets/global-search.svg" alt="Search what you want?">
+                                <img src="../assets/global-search.svg" alt="Search what you want?">
                             </span>
                             <input type="search" class="form-control search-input" placeholder="Search what you want?">
                         </div>
@@ -131,10 +102,10 @@
                 </ul>
             </nav>
             <div class="icon-group d-flex align-items-center gap-3">
-                <img src="assets/bag.svg" alt="Cart">
-                <img src="assets/heart.svg" alt="Wishlist">
-                <img src="assets/notification-bing.svg" alt="Notification">
-                <img src="assets/account-img.jpg" class="user-icon rounded-circle" alt="User">
+                <img src="../assets/bag.svg" alt="Cart">
+                <img src="../assets/heart.svg" alt="Wishlist">
+                <img src="../assets/notification-bing.svg" alt="Notification">
+                <img src="../assets/account-img.jpg" class="user-icon rounded-circle" alt="User">
             </div>
         </div>
     </header>
@@ -144,9 +115,9 @@
             <svg fill="#FFAF17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
         </button>
         <figure class="main-logo pt-2">
-            <img class="mobile-logo" src="assets/bahri-main-logo.svg" alt="Bahri Logo">
+            <img class="mobile-logo" src="../assets/bahri-main-logo.svg" alt="Bahri Logo">
         </figure>
-        <img src="assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User">
+        <img src="../assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User">
     </div>
     <div class="off-canvas">
         <nav class="nav-links pt-2">
@@ -160,73 +131,61 @@
         <div class="search-container">
             <div class="position-relative py-4">
                 <span class="icon-wrapper border-end pe-1 border-dark">
-                    <img src="assets/global-search.svg" alt="Search what you want?">
+                    <img src="../assets/global-search.svg" alt="Search what you want?">
                 </span>
                 <input type="search" class="form-control search-input d-lg-none d-block" placeholder="Search what you want?">
             </div>
         </div>
         <div class="icon-group d-flex align-items-center justify-content-center gap-3">
-            <img src="assets/bag.svg" alt="Cart">
-            <img src="assets/heart.svg" alt="Wishlist">
-            <img src="assets/notification-bing.svg" alt="Notification">
+            <img src="../assets/bag.svg" alt="Cart">
+            <img src="../assets/heart.svg" alt="Wishlist">
+            <img src="../assets/notification-bing.svg" alt="Notification">
         </div>
     </div>
     <!-- Mobile Header End -->
     <main class="bg-white py-5">
         <section class="container-fluid container-lg mx-auto row position-relative">
-            <div class="col-12 col-lg-6 py-3">
-                <img class="detail-img img-fluid" src="assets/view-detail-img.jpeg" alt="MarineShield Pro Life Jacket">
+            <div class="col-12 col-lg-6 py-3 ">
+                <img class="detail-img img-fluid" src="../assets/detail-img.jpg" alt="MarineShield Pro Life Jacket">
                 <div class="d-flex gap-3 py-3 img-group justify-content-center justify-content-lg-start flex-wrap">
-                    <img class="pdetail-imgs" src="assets/view-detail-img.jpeg" alt="gallery image">
-                    <img class="pdetail-imgs" src="assets/view-detail-img.jpeg" alt="gallery image">
-                    <img class="pdetail-imgs" src="assets/view-detail-img.jpeg" alt="gallery image">
-                    <img class="pdetail-imgs" src="assets/view-detail-img.jpeg" alt="gallery image">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
                 </div>
             </div>
             <div class="col-12 col-lg-6 py-3">
                 <div class="detail-content">
                     <div class="d-flex align-items-center justify-content-between flex-wrap">
-                        <h3 class="fw-bold detail-heading">Jet SKI Yamaha VX <br>Deluxe</h3>
-                        <div class="fw-bold detail-price">$200/day</div>
+                        <h3 class="fw-bold detail-heading">Peak Nest Chalet</h3>
+                        <div class="fw-bold detail-price">$120 Per Night</div>
                     </div>
-                    <p class="text-black">Ride the waves with our latest, super-fast Jet Ski—built for thrill and comfort. Perfect for all skill levels. Book now!</p>
+                    <p class="text-black">Fully equipped kitchen, cozy fireplace, private patio, complimentary Wi-Fi, and stunning mountain views. This chalet is perfect for a relaxing getaway, offering all the comforts of home with nature at your doorstep.</p>
                     <ul class="list-unstyled">
                         <li class="d-flex gap-2">
-                            <img class="pb-3" src="assets/verify.svg" alt="verify"> 
-                            <p class="text-black">Type: Yamaha VX Deluxe, 3-seater</p>
-                        </li>
-                        <li class="d-flex gap-2">
-                            <img class="pb-3" src="assets/verify.svg" alt="verify"> 
-                            <p class="text-black">Engine: 1049cc, 4-cylinder, 4-stroke</p>
-                        </li>
-                        <li class="d-flex gap-2">
-                            <img class="pb-3" src="assets/verify.svg" alt="verify"> 
-                            <p class="text-black">Top Speed: Up to 50 mph</p>
-                        </li>
-                        <li class="d-flex gap-2">
-                            <img class="pb-3" src="assets/verify.svg" alt="verify"> 
-                            <p class="text-black">Safety Features: Anti-slip mats, grab handles, and a learning mode for beginners.</p>
+                            <img class="pb-3" src="../assets/verify.svg" alt="verify"> 
+                            <p class="text-black">2-Bedroom Chalet</p>
                         </li>
                     </ul>
                     <div class="d-flex gap-3 flex-wrap">
                         <button type="button"
                         data-bs-toggle="modal"
-                        data-bs-target="#RescheduleBookingModal" class="add-cart-btn d-flex align-items-center justify-content-center gap-2"><img src="assets/edit-2.svg" alt="Modify Booking"> Modify Booking</button>
-                        <button type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#CancelBookingModal" class="add-cart-btn cancel-btn d-flex align-items-center justify-content-center gap-2"><img src="assets/close-circle.svg" alt="Modify Booking"> Cancel Booking</button>
+                        data-bs-target="#SelectDateTimeModal"  class="add-cart-btn">Book Now</button>
+                        <button class="favorite-btn d-flex align-items-center justify-content-center gap-1"><img src="../assets/heart-black.svg" class="opacity-50" alt=""> Favorite</button>
+                        <button class="share-btn d-flex align-items-center justify-content-center"><img src="../assets/share.svg" alt="Share"></button>
                     </div>
                     <div class="availability-box d-flex align-items-center justify-content-between py-4 mt-2">
                         <h5 class="fw-bold blue-text">Terms and Conditions</h5>
-                        <img src="assets/arrow-right.svg" alt="arrow-right">
+                        <img src="../assets/arrow-right.svg" alt="arrow-right">
                     </div>
-                    <div class="pt-3 pb-2 availability-box">
-                        <h5 class="fw-bold booking-date text-black">Current Boat Location</h5>
-                        <div class="current-location">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81683.86168536676!2d81.84008156900482!3d25.468193806398748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399ab5413b990cf9%3A0x784b8544788a324c!2sShri%20Nagvasuki%20Temple%2C%20Prayagraj!5e0!3m2!1sen!2sin!4v1736605346773!5m2!1sen!2sin" width="100%" height="100%" style="border-radius: 17px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                    <div class="py-2 availability-box">
+                        <h5 class="fw-bold">Availability</h5>
+                        <ul class="list-unstyled d-flex flex-wrap align-items-center gap-2">
+                            <li class="availability-item">Available Today</li>
+                            <li class="availability-item">Next Weekend</li>
+                        </ul>
                     </div>
-                    <div class="py-3">
+                    <div class="py-2">
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <h5 class="fw-bold">Rating</h5>
                             <button class="see-all-btn-small">See all</button>
@@ -273,12 +232,12 @@
                             <button class="see-all-btn-small">See all</button>
                         </div>
                         <div class="d-flex gap-3 flex-wrap">
-                            <img class="gallery-img" src="assets/gallery-img.png" alt="gallery image">
-                            <img class="gallery-img" src="assets/gallery-img.png" alt="gallery image">
-                            <img class="gallery-img" src="assets/gallery-img.png" alt="gallery image">
-                            <img class="gallery-img" src="assets/gallery-img.png" alt="gallery image">
-                            <img class="gallery-img" src="assets/gallery-img.png" alt="gallery image">
-                            <img class="gallery-img" src="assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
                         </div>
                     </div>
                 </div>
@@ -289,7 +248,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-                    <img src="assets/bahri-main-logo.svg" alt="Bahri Logo" class="footer-logo">
+                    <img src="../assets/bahri-main-logo.svg" alt="Bahri Logo" class="footer-logo">
                     <p class="footer-description">
                         Welcome to Bahri – your gateway to unforgettable marine experiences! At Bahri, we specialize in marine equipment and boat rentals, along with a wide range of services to enhance your time on the water. Whether you're looking to embark on a scenic tour, book a thrilling trip, or find the perfect equipment for your marine adventures, Bahri has you covered!
                     </p>
@@ -328,7 +287,7 @@
         </div>
     </footer>
 
-    <script src="JS/script.js"></script>
+    <script src="../JS/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

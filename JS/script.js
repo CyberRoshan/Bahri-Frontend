@@ -110,6 +110,87 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ? Header JS End
 
+// ! Calender Logic Start
+const currentDateTitle = document.querySelector(".current-date");
+const daysTag = document.querySelector(".days");
+const prevNextIcons = document.querySelectorAll(".icons span");
+
+let date = new Date();
+let currentYear = date.getFullYear();
+let currentMonth = date.getMonth();
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+// Highlighted dates (similar to the design)
+const highlightedDates = [8, 15];
+
+const renderCalendar = () => {
+  const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+  const lastDateOfMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+  const lastDayOfMonth = new Date(
+    currentYear,
+    currentMonth,
+    lastDateOfMonth
+  ).getDay();
+  const lastDateOfLastMonth = new Date(currentYear, currentMonth, 0).getDate();
+
+  let liDayTag = "";
+
+  // Adjust for Monday as first day of week
+  const adjustedFirstDay = firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1;
+
+  for (let i = adjustedFirstDay; i > 0; i--) {
+    liDayTag += `<li class="inactive">${lastDateOfLastMonth - i + 1}</li>`;
+  }
+
+  for (let i = 1; i <= lastDateOfMonth; i++) {
+    let isHighlight = highlightedDates.includes(i) ? "highlight" : "";
+    liDayTag += `<li class="${isHighlight}">${i}</li>`;
+  }
+
+  const remainingDays = 7 - ((adjustedFirstDay + lastDateOfMonth) % 7);
+  if (remainingDays < 7) {
+    for (let i = 1; i <= remainingDays; i++) {
+      liDayTag += `<li class="inactive">${i}</li>`;
+    }
+  }
+
+  currentDateTitle.innerText = `${months[currentMonth]} ${currentYear}`;
+  daysTag.innerHTML = liDayTag;
+};
+
+renderCalendar();
+
+prevNextIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    currentMonth = icon.id === "prevIcon" ? currentMonth - 1 : currentMonth + 1;
+
+    if (currentMonth < 0 || currentMonth > 11) {
+      date = new Date(currentYear, currentMonth);
+      currentYear = date.getFullYear();
+      currentMonth = date.getMonth();
+    } else {
+      date = new Date();
+    }
+
+    renderCalendar();
+  });
+});
+// ! Calender Logic End
+
 // ? login.html Start
 // ! OTP Verification Logic Start
 document.addEventListener("DOMContentLoaded", function () {
@@ -199,7 +280,7 @@ function toggle(index) {
 // ! Toggle Button End
 // ? booking-history.html End
 
-
 // ! Price Range Slider Start
 
 // ! Price Range Slider End
+

@@ -315,7 +315,9 @@
     height: 45px;
     font-size: 13px;
   }
-
+  .fav-btn-85{
+    flex-basis: 100%;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {
@@ -533,6 +535,9 @@
     width: 140px;
     height: 50px;
     font-size: 14px;
+  }
+  .fav-btn-85{
+    flex-basis: 100%;
   }
 }
 
