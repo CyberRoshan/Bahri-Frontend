@@ -110,6 +110,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ? Header JS End
 
+// ! Price Range Slider Start
+function initializePriceRangeSlider(sliderId, minValueId, maxValueId, minPrice = 0, maxPrice = 5000, startMin = 200, startMax = 4000) {
+  const slider = document.getElementById(sliderId);
+  const minValue = document.getElementById(minValueId);
+  const maxValue = document.getElementById(maxValueId);
+
+  noUiSlider.create(slider, {
+      start: [startMin, startMax],
+      connect: true,
+      range: {
+          'min': minPrice,
+          'max': maxPrice
+      },
+      format: {
+          to: function(value) {
+              return '$' + Math.round(value);
+          },
+          from: function(value) {
+              return Number(value.replace('$', ''));
+          }
+      }
+  });
+
+  slider.noUiSlider.on('update', function(values, handle) {
+      if (handle === 0) {
+          minValue.textContent = values[0];
+      } else {
+          maxValue.textContent = values[1];
+      }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Price Range Slider
+  initializePriceRangeSlider('price-range', 'min-value', 'max-value');
+});
+// ! Price Range Slider End
+
 // ! Calender Logic Start
 const currentDateTitle = document.querySelector(".current-date");
 const daysTag = document.querySelector(".days");
@@ -191,6 +229,19 @@ prevNextIcons.forEach((icon) => {
 });
 // ! Calender Logic End
 
+// ? cart-screen.html Start
+// ! Add Address Script Start
+document.getElementById("confirmButton").addEventListener("click", function () {
+  const addressBox = document.getElementById("addressBox");
+  addressBox.classList.remove("d-none");
+  addressBox.classList.add("d-block");
+
+  const addAddressButton = document.getElementById("addAddressButton");
+  addAddressButton.style.display = "none";
+});
+// ! Add Address Script End
+// ? cart-screen.html End
+
 // ? login.html Start
 // ! OTP Verification Logic Start
 document.addEventListener("DOMContentLoaded", function () {
@@ -232,19 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // ! OTP Verification Logic End
 // ? login.html End
 
-// ? cart-screen.html Start
-// ! Add Address Script Start
-document.getElementById("confirmButton").addEventListener("click", function () {
-  const addressBox = document.getElementById("addressBox");
-  addressBox.classList.remove("d-none");
-  addressBox.classList.add("d-block");
-
-  const addAddressButton = document.getElementById("addAddressButton");
-  addAddressButton.style.display = "none";
-});
-// ! Add Address Script End
-// ? cart-screen.html End
-
 // ? booking-history.html Start
 // ! Toggle Button Start
 const buttons = document.querySelectorAll(".toggle-button");
@@ -279,8 +317,3 @@ function toggle(index) {
 }
 // ! Toggle Button End
 // ? booking-history.html End
-
-// ! Price Range Slider Start
-
-// ! Price Range Slider End
-

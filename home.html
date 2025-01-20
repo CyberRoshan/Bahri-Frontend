@@ -54,7 +54,8 @@
     <!-- ! Weather Popup End -->
     <img class="position-absolute top-0 start-0 d-lg-block d-none" src="assets/shape-1.svg" alt="">
     <img class="position-absolute top-0 end-0 d-lg-block d-none" src="assets/shape-2.svg" alt="">
-    <header class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5">
+    <div class="mb-100 fixed-header">
+    <header class="w-100 common-header position-fixed z-999 d-flex align-items-center justify-content-center gap-5">
         <figure class="main-logo">
             <img src="assets/bahri-main-logo.svg" alt="Bahri Logo">
         </figure>
@@ -204,8 +205,10 @@
             </div>
         </div>
     </header>
+</div>
     <!-- Mobile Header Start -->
-    <div class="mobile-header d-none">
+     <div class=" w-100 mobile-fixed-header">
+    <div class="mobile-header position-fixed z-999 w-100 d-none">
         <button class="menu-toggle">
             <svg fill="#FFAF17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
         </button>
@@ -286,6 +289,7 @@
         
 
     </div>
+</div>
     <div class="off-canvas">
         <nav class="nav-links pt-2">
             <ul class="list-unstyled">
@@ -364,12 +368,36 @@
     </div>
     <!-- Mobile Header End -->
      <main class="bg-white py-5 px-2">
-        <section class="container img-card position-relative">
-            <div class="position-absolute hero-content-box">
-                <h2 class="text-white baloo">Special Discounts <br> Just for You!</h2>
-                <button class="yellow-btn">Explore Now</button>
+        <div id="customDiscountCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <section class="container img-card position-relative d-flex align-items-center">
+                        <div class="position-absolute hero-content-box">
+                            <h2 class="text-white baloo">Special Discounts <br> Just for You!</h2>
+                            <button class="yellow-btn">Explore Now</button>
+                        </div>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="container img-card position-relative d-flex align-items-center">
+                        <div class="position-absolute hero-content-box">
+                            <h2 class="text-white baloo">Roshan Discounts <br> Just for You!</h2>
+                            <button class="yellow-btn">Explore Now</button>
+                        </div>
+                    </section>
+                </div>
+                <div class="carousel-item">
+                    <section class="container img-card position-relative d-flex align-items-center">
+                        <div class="position-absolute hero-content-box">
+                            <h2 class="text-white baloo">Ankit Discounts <br> Just for You!</h2>
+                            <button class="yellow-btn">Explore Now</button>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </section>
+        </div>
+        
+          
         <section class="container pt-5 pb-4 position-relative">
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h3 class="h3-heading">Services</h3>

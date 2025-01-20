@@ -93,8 +93,9 @@
       </div>
     </div>
   <!-- ! Weather Popup End -->
+  <div class="mb-100 fixed-header">
     <header
-      class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5"
+      class="w-100 common-header position-fixed z-999 d-flex align-items-center justify-content-center gap-5"
     >
       <figure class="main-logo">
         <img src="assets/bahri-main-logo.svg" alt="Bahri Logo" />
@@ -360,8 +361,10 @@
         </div>
       </div>
     </header>
+  </div>
     <!-- Mobile Header Start -->
-    <div class="mobile-header d-none">
+    <div class=" w-100 mobile-fixed-header">
+    <div class="mobile-header position-fixed z-999 d-none">
       <button class="menu-toggle">
         <svg
           fill="#FFAF17"
@@ -517,6 +520,7 @@
           </a>
         </div>
       </div>
+    </div>
     </div>
     <div class="off-canvas">
       <nav class="nav-links pt-2">

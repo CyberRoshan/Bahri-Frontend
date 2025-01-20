@@ -24,6 +24,12 @@
   font-size: 12px;
   font-weight: 600;
   color: black;
+  transition: 0.5s;
+}
+.yellow-btn:hover {
+  background-color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  color: white;
 }
 .h3-heading {
   color: var(--primary-blue);
@@ -37,8 +43,13 @@
   border: 1px solid var(--light-shade);
   font-weight: 600;
   font-size: 12px;
-  color: black;
-  opacity: 50%;
+  color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+.see-all-btn:hover {
+  background-color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  color: white;
 }
 .left-img {
   flex-basis: 62%;
@@ -81,6 +92,11 @@
   border-radius: 17px;
   background-color: var(--primary-blue);
   border: 1px solid var(--primary-blue);
+  transition: 0.5s;
+}
+.right-arw-btn:hover {
+  background-color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
 }
 .shape-bottom-left {
   top: 60%;
@@ -373,6 +389,12 @@ input[type="checkbox"]:checked::after {
   .mobile-header {
     display: flex !important;
   }
+  .fixed-header{
+    display: none;
+  }
+  .mobile-fixed-header{
+    padding-bottom: 100px;
+  }
 
   .off-canvas .search-input {
     width: 100%;
@@ -406,6 +428,11 @@ input[type="checkbox"]:checked::after {
 .card-style img {
   border-radius: 22px;
   width: 100%;
+  transition: 0.5s;
+}
+.card-style img:hover {
+  transform: scale(1.02);
+  overflow: hidden;
 }
 
 .card-style h5 {
@@ -418,6 +445,10 @@ input[type="checkbox"]:checked::after {
   border-radius: 22px;
   width: 100%;
   height: 305px;
+  transition: 0.5s;
+}
+.card-style-2:hover {
+  transform: scale(1.02);
 }
 
 .trip-tour-1 {
@@ -483,6 +514,7 @@ input[type="checkbox"]:checked::after {
   border-radius: 27px;
   background-color: var(--light-shade);
   padding: 12px 10px;
+  transition: box-shadow 0.2s ease;
 }
 
 .card-style-3 img {
@@ -490,6 +522,15 @@ input[type="checkbox"]:checked::after {
   width: 100%;
   height: 217px;
   object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.card-style-3:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-style-3:hover img {
+  transform: scale(1.02);
 }
 
 .h3-heading {
@@ -533,24 +574,36 @@ input[type="checkbox"]:checked::after {
   border-radius: 22px;
   height: 446px;
   width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .catering-1 {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
     url("../assets/catering-1.jpg") center no-repeat;
   background-size: cover;
+  transition: transform 0.3s ease;
 }
 
 .catering-2 {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
     url("../assets/catering-2.jpg") center no-repeat;
   background-size: cover;
+  transition: transform 0.3s ease;
 }
 
 .catering-3 {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
     url("../assets/catering-3.jpg") center no-repeat;
   background-size: cover;
+  transition: transform 0.3s ease;
+}
+.catering-item:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.catering-item:hover .catering-1 {
+  transform: scale(1.1); 
 }
 
 .catering-price {
@@ -657,6 +710,12 @@ input[type="checkbox"]:checked::after {
   color: white;
   font-weight: 700;
   border: 1px solid var(--primary-blue);
+  transition: 0.5s;
+}
+.add-cart-btn:hover {
+  background-color: var(--primary-orange);
+  color: black;
+  border: 1px solid var(--primary-orange);
 }
 .favorite-btn {
   background-color: var(--primary-orange);
@@ -666,6 +725,11 @@ input[type="checkbox"]:checked::after {
   border: 1px solid var(--primary-orange);
   color: black;
   font-weight: 700;
+  transition: 0.5s;
+}
+.favorite-btn:hover {
+  background-color:var(--light-shade);
+  border: 1px solid var(--primary-blue);
 }
 .share-btn {
   background-color: var(--light-shade);
@@ -673,6 +737,11 @@ input[type="checkbox"]:checked::after {
   border-radius: 17px;
   width: 60px;
   height: 60px;
+  transition: 0.5s;
+}
+.share-btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary-blue);
 }
 .term-condition h5 {
   color: var(--primary-blue);
@@ -692,8 +761,13 @@ input[type="checkbox"]:checked::after {
   border: 1px solid var(--light-shade);
   font-weight: 600;
   font-size: 12px;
-  color: black;
-  opacity: 50%;
+  color: rgba(0, 0, 0,0.5);
+  transition: 0.5s;
+}
+.see-all-btn-small:hover {
+  background-color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  color: white;
 }
 .rating-card {
   padding: 20px 30px;
@@ -734,6 +808,11 @@ input[type="checkbox"]:checked::after {
   font-size: 10px;
   font-weight: 600;
   border-radius: 24px;
+  transition: 0.5s;
+}
+.see-product-btn:hover {
+  color: white;
+  background-color: var(--primary-blue);
 }
 .fs-14 {
   font-size: 14px;
@@ -1024,6 +1103,12 @@ input[type="checkbox"]:checked::after {
   font-weight: 700;
   font-size: 12px;
   border: 1px solid var(--primary-orange);
+  transition: 0.5s;
+}
+.redeem-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 .h5-heading {
@@ -1076,10 +1161,6 @@ input[type="checkbox"]:checked::after {
   transition: background-color 0.3s ease;
 }
 
-.add-cart-btn:hover {
-  background-color: #004a6e;
-}
-
 .modal-refer-img {
   max-width: 100%;
   height: auto;
@@ -1099,6 +1180,8 @@ input[type="checkbox"]:checked::after {
   border-radius: 17px;
   background-color: var(--light-shade);
   height: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease; 
 }
 
 .product-card img {
@@ -1106,6 +1189,15 @@ input[type="checkbox"]:checked::after {
   max-height: 192px;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover img {
+  transform: scale(1.03);
 }
 
 .product-card h3 {
@@ -1171,7 +1263,13 @@ input[type="checkbox"]:checked::after {
   background-color: var(--light-shade);
   border-radius: 17px;
   padding: 12px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+.notification-box:hover {
+  background-color: var(--primary-shade); /* Slightly darker or accent color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
 .notification-box h5 {
   color: var(--primary-blue);
 }
@@ -1191,12 +1289,22 @@ input[type="checkbox"]:checked::after {
 .product-card-2 {
   border-radius: 17px;
   background-color: var(--light-shade);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
 }
 .product-card-2 img {
   height: 192px;
   border-radius: 17px;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.2s ease;
+}
+.product-card-2:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.product-card-2:hover img {
+  transform: scale(1.03);
 }
 .product-card-2 h3 {
   font-size: 18px;
@@ -1584,6 +1692,10 @@ input[type="checkbox"]:checked::after {
   width: 28px;
   border: 1px solid var(--primary-orange);
 }
+.next-prev-btn:hover{
+  background-color: transparent;
+  border: 1px solid var(--primary-blue);
+}
 .next-prev-btn img{
   width: 14px;
   height: 14px;
@@ -1595,6 +1707,10 @@ input[type="checkbox"]:checked::after {
   width: 36px;
   border: 1px solid var(--primary-orange);
   transition: all 0.3s ease;
+}
+.next-prev-btn-big:hover{
+  background-color: transparent;
+  border: 1px solid var(--primary-blue);
 }
 .next-prev-btn-big img{
   width: 20px;
@@ -1658,10 +1774,20 @@ input[type="checkbox"]:checked::after {
   background-color: var(--primary-orange);
   border: 1px solid var(--primary-orange);
   color: white;
+  transition: 0.5s;
+}
+.contact-btn:hover{
+  background-color: #cc8d13;
+  border: 1px solid #cc8d13;
 }
 .whatsapp-btn{
   background-color: #34A853;
   border: 1px solid #34A853;
+  transition: 0.5s;
+}
+.whatsapp-btn:hover{
+  background-color: #2c8d45;
+  border: 1px solid #2c8d45;
 }
 .rounded-27{
   border-radius: 27px !important;
@@ -1966,4 +2092,52 @@ input[type="checkbox"]:checked::after {
 
 .fav-btn-85{
   flex-basis: 85%;
+}
+
+/* Range Slider Styling */
+.noUi-connect {
+  background: var(--primary-blue); 
+}
+
+.noUi-target {
+  height: 8px;
+  background-color: #E5E5E5;
+  border-radius: 10px;
+}
+
+.noUi-handle {
+  width: 24px !important;
+  transform: translateY(-3px);
+  height: 24px !important;
+  border-radius: 50%;
+  background-color: var(--primary-orange); /* Orange color */
+  border: 3px solid white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.noUi-handle:after, .noUi-handle:before{
+  display: none;
+}
+
+/* Price Values */
+.price-value {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #000;
+}
+
+#price-range-values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.mb-100{
+  padding-bottom: 100px;
+}
+.z-999{
+  z-index: 999;
+}
+.carousel-inner {
+  transition: transform 0.5s ease-in-out;
 }
