@@ -168,11 +168,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // On click of the next button, hide current section and show next section with fade effect
             $(".next-btn").click(function(e) {
-                e.preventDefault(); // Prevent the default anchor click behavior
-                $("#section1").fadeOut(500, function() { // Fade out the first section
-                    $("#section2").fadeIn(500); // Fade in the second section
+                e.preventDefault();
+                $("#section1").fadeOut(500, function() { 
+                    $("#section2").fadeIn(500);
                 });
             });
 

@@ -49,7 +49,9 @@
                 <input type="tel" class="verification-input" maxlength="1" inputmode="numeric" pattern="[0-9]*">
               </div>
               <button
-                type="button"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#selectLanguageModal"
                 class="right-arw-btn login-btn fw-bold mt-2 mb-4 w-100"
               >
                 Confirm
@@ -64,6 +66,39 @@
         </div>
       </div>
       <!-- OTP Verification Modal End -->
+      <!-- Select Language Modal Start -->
+      <div
+        class="modal fade"
+        id="selectLanguageModal"
+        tabindex="-1"
+        aria-labelledby="selectLanguageModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div
+            class="modal-content flex-column mx-auto gap-3 py-4 px-4 modal-box text-center bg-white position-relative"
+          >
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              class="popup-close-btn position-absolute end-0 top-0"
+            >
+              <img src="assets/close-icon.svg" alt="Close" />
+            </button>
+            <h4 class="fw-bold" id="selectLanguageModalLabel">Select<br>Language</h4> 
+            <form action="">
+              <button
+              type="button"
+              class="right-arw-btn login-btn fw-bold mt-2 mb-4 w-100"
+            >
+              Confirm
+            </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Select Language Modal End -->
       <!-- Decorative shapes -->
       <div class="position-absolute top-0 end-0">
         <img src="assets/blue-circle.svg" alt="" />

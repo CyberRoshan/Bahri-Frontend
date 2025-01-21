@@ -2181,16 +2181,12 @@ input[type="checkbox"]:checked::after {
   color: white;
   font-weight: bold;
 }
-
-.iti__flag-container {
-  border: none;
-  background-color: transparent;
+.whatsapp-big{
+  width: 30px !important;
+  height: 30px !important;
+  cursor: pointer;
 }
-
-.iti__selected-flag {
-  border: none;
-}
-.phone-input {
-  width: 100% !important; /* Ensure it overrides any other conflicting styles */
-  box-sizing: border-box; /* Includes padding and borders in the width calculation */
+.fish-food-card > img{
+  width: 245px !important;
+  height: 155px !important;
 }

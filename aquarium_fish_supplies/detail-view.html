@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <title>Home | Bahri</title>
+</head>
+<body>
+    <!-- !  Select Date Popup Start -->
+    <div
+    class="modal fade"
+    id="SelectDateModal"
+    tabindex="-1"
+    aria-labelledby="SelectDateModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div
+        class="modal-content flex-column mx-auto gap-3 py-4 px-4 invoice-modal text-center bg-white position-relative"
+      >
+        <button
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          class="popup-close-btn position-absolute end-0 top-0"
+        >
+          <img src="../assets/close-icon.svg" alt="Close" />
+        </button>
+        <div>
+          <div class="d-flex flex-column gap-2">
+            <h4 class="fw-bold blue-text fs-30" id="SelectDateModalLabel">Select Date</h4>
+            <div class="wrapper calender-popup px-0 py-2">
+                <header>
+                  <p class="current-date m-0"></p>
+                  <div class="icons">
+                    <span id="prevIcon"><i class="fa-solid fa-angle-left light-blue-text"></i></span>
+                    <span id="nextIcon"><i class="fa-solid fa-angle-right blue-text"></i></span>
+                  </div>
+                </header>
+                <div class="calendar">
+                  <ul class="weeks">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                  </ul>
+                  <ul class="days"></ul>
+                </div>
+              </div>
+            <div class="filter-section d-flex align-items-center justify-content-between">
+                <h3>Select Members</h3>
+                <div class="quantity-btn d-flex align-items-center justify-content-between">
+                    <button class="d-flex align-items-center justify-content-center"><i
+                        class="fa-solid fa-minus"></i></button>
+                    <div class="fs-14 fw-bold text-white">2</div>
+                    <button class="d-flex align-items-center justify-content-center"><i
+                        class="fa-solid fa-plus"></i></button>
+                  </div>
+            </div>
+            <div class="filter-section text-start">
+                <h3>Select Time Slot</h3>
+                <div class="time-options">
+                    <button class="time-slot-btn blue-active">09:00 AM</button>
+                    <button class="time-slot-btn">01:00 PM</button>
+                    <button class="time-slot-btn">03:00 PM</button>
+                    <button class="time-slot-btn">05:00 PM</button>
+                    <button class="time-slot-btn">07:00 PM</button>
+                </div>
+            </div>
+            <div class="filter-section text-start">
+                <h3>Select Size</h3>
+                <div class="time-options">
+                    <button class="time-slot-btn blue-active">Small</button>
+                    <button class="time-slot-btn">Medium</button>
+                    <button class="time-slot-btn">Large</button>
+                </div>
+            </div>
+                <button type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#DeliveryAddressModal" class="add-cart-btn w-100">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- ! Select Date Popup End -->
+     <!-- ! Enter Delivery Address Start -->
+    <div class="modal fade" id="DeliveryAddressModal" tabindex="-1" aria-labelledby="DeliveryAddressModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content flex-column mx-auto gap-3 py-4 px-4 modal-box text-center bg-white position-relative">
+        <button type="button" data-bs-dismiss="modal" aria-label="Close"
+          class="popup-close-btn position-absolute end-0 top-0">
+          <img src="../assets/close-icon.svg" alt="Close" />
+        </button>
+        <h4 class="fw-bold" id="DeliveryAddressModalLabel">Enter <br>Delivery Address</h4>
+        <form>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/user.svg" alt="Enter Full Name" />
+            </span>
+            <input type="text" class="form-control custom-input" placeholder="Enter Full Name" />
+          </div>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/phone-icon.svg" alt="Enter Mobile Number" />
+            </span>
+            <input type="tel" class="form-control custom-input" placeholder="Enter Mobile Number" />
+          </div>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/location-black.svg" alt="Enter Address-1" />
+            </span>
+            <input type="text" class="form-control custom-input" placeholder="Enter Address-1" />
+          </div>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/location-black.svg" alt="Enter Address-2" />
+            </span>
+            <input type="text" class="form-control custom-input" placeholder="Enter Address-2" />
+          </div>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/location-black.svg" alt="Enter City" />
+            </span>
+            <input type="text" class="form-control custom-input" placeholder="Enter City" />
+          </div>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/location-black.svg" alt="Select State" />
+            </span>
+            <select name="" id="" class="form-control custom-input" placeholder="Select State">
+              <option value="Select State" class="text-dark">Select State</option>
+              <option value="Select State" class="text-dark">Select State</option>
+              <option value="Select State" class="text-dark">Select State</option>
+            </select>
+          </div>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/location-black.svg" alt="Select State" />
+            </span>
+            <select name="" id="" class="form-control custom-input" placeholder="Select Country">
+              <option value="Select Country" class="text-dark">Select Country</option>
+              <option value="Select Country" class="text-dark">Select Country</option>
+              <option value="Select Country" class="text-dark">Select Country</option>
+            </select>
+          </div>
+          <div class="position-relative py-2">
+            <span class="icon-wrapper">
+              <img class="opacity-20" src="../assets/location-black.svg" alt="Enter Zip Code" />
+            </span>
+            <input type="tel" class="form-control custom-input" placeholder="Enter Zip Code" />
+          </div>
+
+          <button class="right-arw-btn login-btn fw-bold mt-2 mb-4 w-100">
+                Confirm
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- ! Enter Delivery Address End -->
+    <img class="position-absolute top-0 start-0 d-lg-block d-none" src="../assets/shape-1.svg" alt="">
+    <header class="w-100 common-header position-relative z-3 d-flex align-items-center justify-content-center gap-5">
+        <figure class="main-logo">
+            <img src="../assets/bahri-main-logo.svg" alt="Bahri Logo">
+        </figure>
+        <div class="navigation-area d-flex align-items-center justify-content-between gap-3">
+            <nav class="nav-links pt-2">
+                <ul class="d-flex align-items-center justify-content-between list-unstyled">
+                    <li class="nav-items">Home</li>
+                    <li class="nav-items nav-active">Services</li>
+                    <li class="nav-items">Booking</li>
+                    <li class="nav-items">Rewards</li>
+                    <li class="search-container">
+                        <div class="position-relative py-4">
+                            <span class="icon-wrapper border-end pe-1 border-dark">
+                                <img src="../assets/global-search.svg" alt="Search what you want?">
+                            </span>
+                            <input type="search" class="form-control search-input" placeholder="Search what you want?">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icon-group d-flex align-items-center gap-3">
+                <img src="../assets/bag.svg" alt="Cart">
+                <img src="../assets/heart.svg" alt="Wishlist">
+                <img src="../assets/notification-bing.svg" alt="Notification">
+                <img src="../assets/account-img.jpg" class="user-icon rounded-circle" alt="User">
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Header Start -->
+    <div class="mobile-header d-none">
+        <button class="menu-toggle">
+            <svg fill="#FFAF17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+        </button>
+        <figure class="main-logo pt-2">
+            <img class="mobile-logo" src="../assets/bahri-main-logo.svg" alt="Bahri Logo">
+        </figure>
+        <img src="../assets/account-img.jpg" class="user-icon rounded-circle mobile-user" alt="User">
+    </div>
+    <div class="off-canvas">
+        <nav class="nav-links pt-2">
+            <ul class="list-unstyled">
+                <li class="nav-items">Home</li>
+                <li class="nav-items nav-active">Services</li>
+                <li class="nav-items">Booking</li>
+                <li class="nav-items">Rewards</li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <div class="position-relative py-4">
+                <span class="icon-wrapper border-end pe-1 border-dark">
+                    <img src="../assets/global-search.svg" alt="Search what you want?">
+                </span>
+                <input type="search" class="form-control search-input d-lg-none d-block" placeholder="Search what you want?">
+            </div>
+        </div>
+        <div class="icon-group d-flex align-items-center justify-content-center gap-3">
+            <img src="../assets/bag.svg" alt="Cart">
+            <img src="../assets/heart.svg" alt="Wishlist">
+            <img src="../assets/notification-bing.svg" alt="Notification">
+        </div>
+    </div>
+    <!-- Mobile Header End -->
+    <main class="bg-white py-5">
+        <section class="container-fluid container-lg mx-auto row position-relative">
+            <div class="col-12 col-lg-6 py-3 ">
+                <img class="detail-img img-fluid" src="../assets/detail-img.jpg" alt="MarineShield Pro Life Jacket">
+                <div class="d-flex gap-3 py-3 img-group justify-content-center justify-content-lg-start flex-wrap">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
+                    <img class="pdetail-imgs" src="../assets/detail-img.jpg" alt="gallery image">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 py-3">
+                <div class="detail-content">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap">
+                        <h3 class="fw-bold detail-heading">Princess Castle</h3>
+                    </div>
+                    <p class="text-black">Transform your space into an aquatic haven with our wide range of aquarium fish, accessories, and supplies. Perfect for hobbyists and enthusiasts, we provide everything you need to create and maintain a vibrant aquarium.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#SelectDateModal" class="add-cart-btn">Book Now</button>
+                        <button class="favorite-btn d-flex align-items-center justify-content-center gap-1"><img src="../assets/heart-black.svg" class="opacity-50" alt=""> Favorite</button>
+                        <button class="share-btn d-flex align-items-center justify-content-center"><img src="../assets/share.svg" alt="Share"></button>
+                    </div>
+                    <div class="pt-5">
+                        <h5 class="fw-bold booking-date text-black">Types of Fish</h5>
+                        <ul class="list-unstyled py-2">
+                            <li class="d-flex gap-2">
+                                <img class="pb-3" src="../assets/verify.svg" alt="verify"> 
+                                <p class="text-black">Freshwater: Guppies, Neon Tetras, Betta Fish.</p>
+                            </li>
+                            <li class="d-flex gap-2">
+                                <img class="pb-3" src="../assets/verify.svg" alt="verify"> 
+                                <p class="text-black">Saltwater: Clownfish, Angelfish, Blue Tang.</p>
+                            </li>
+                            <li class="d-flex gap-2">
+                                <img class="pb-3" src="../assets/verify.svg" alt="verify"> 
+                                <p class="text-black">Care Needs: Includes feeding guidelines, water temperature, and habitat compatibility for each fish type.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold booking-date text-black">Tank Size Requirements</h5>
+                        <ul class="list-unstyled py-2">
+                            <li class="d-flex gap-2">
+                                <img class="pb-3" src="../assets/verify.svg" alt="verify"> 
+                                <p class="text-black">Small Tanks: 5–10 gallons for Betta and Tetras.</p>
+                            </li>
+                            <li class="d-flex gap-2">
+                                <img class="pb-3" src="../assets/verify.svg" alt="verify"> 
+                                <p class="text-black">Medium Tanks: 20–30 gallons for small schools of fish.</p>
+                            </li>
+                            <li class="d-flex gap-2">
+                                <img class="pb-3" src="../assets/verify.svg" alt="verify"> 
+                                <p class="text-black">Large Tanks: 50+ gallons for saltwater species or larger fish.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="availability-box d-flex align-items-center justify-content-between py-4 mt-2">
+                        <h5 class="fw-bold blue-text fs-6">Terms and Conditions</h5>
+                        <img src="../assets/arrow-right.svg" alt="arrow-right">
+                    </div>
+                    <div class="py-2 availability-box">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-bold fs-6">Product Owner</h5>
+                            <button class="see-product-btn">See Products</button>
+                        </div>
+                        <div class="seller-box d-flex align-items-center justify-content-between py-2 flex-wrap gap-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="../assets/review-user.jpg" alt="User">
+                                <div class="text-black">
+                                    <h6 class="fw-bold m-0">James Thomas</h6>
+                                    <p class="fs-14 fw-semibold m-0">(671) 555-0110</p>
+                                </div>
+                            </div>
+                            <img class="whatsapp-big" src="../assets/whatsapp-icon.svg" alt="Whatsapp">
+                        </div>
+                    </div>
+                    <div class="py-3 availability-box">
+                        <h5 class="fw-bold booking-date text-black">Prices</h5>
+                        <div class="time-options text-center py-2">
+                            <div class="time-slot-btn fs-12  px-4"><b class="fs-24">$75</b> <br>Small</div>
+                            <div class="time-slot-btn fs-12 px-4"><b class="fs-24">$100</b> <br>Medium</div>
+                            <div class="time-slot-btn fs-12 px-4"><b class="fs-24">$125</b> <br>Large</div>
+                        </div>
+                    </div>
+                    <div class="py-2 availability-box">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="fw-bold fs-6 blue-text">Fish Food</h5>
+                            <button class="see-product-btn">See Products</button>
+                        </div>
+                        <div class="row row-cols-1 row-cols-sm-2 g-4 py-3">
+                            <div class="col">
+                              <div class="product-card-2 fish-food-card rounded-27 p-3 pb-0">
+                                  <figure class="position-relative m-0">
+                                      <img src="../assets/detail-img.jpg" alt="Snorkeling Gear Set" class="img-fluid rounded-27">
+                                      <button class="fav-btn">
+                                          <svg class="position-absolute" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M13.7003 2.58301C12.192 2.58301 10.842 3.31634 10.0003 4.44134C9.15866 3.31634 7.80866 2.58301 6.30033 2.58301C3.74199 2.58301 1.66699 4.66634 1.66699 7.24134C1.66699 8.23301 1.82533 9.14967 2.10033 9.99967C3.41699 14.1663 7.47533 16.658 9.48366 17.3413C9.76699 17.4413 10.2337 17.4413 10.517 17.3413C12.5253 16.658 16.5837 14.1663 17.9003 9.99967C18.1753 9.14967 18.3337 8.23301 18.3337 7.24134C18.3337 4.66634 16.2587 2.58301 13.7003 2.58301Z" fill="black"/>
+                                              </svg>                    
+                                        </button>
+                                  </figure>
+                                <div class="product-card-content text-center">
+                                  <h3 class="m-0 fs-18 fw-bold">TetraMin Tropical <br> Flakes</h3>
+                                  <p class="fs-12 fw-semibold pt-2">Starting from $8.99</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="product-card-2 fish-food-card rounded-27 p-3 pb-0">
+                                  <figure class="position-relative m-0">
+                                      <img src="../assets/detail-img.jpg" alt="Snorkeling Gear Set" class="img-fluid rounded-27">
+                                      <button class="fav-btn">
+                                          <svg class="position-absolute" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M13.7003 2.58301C12.192 2.58301 10.842 3.31634 10.0003 4.44134C9.15866 3.31634 7.80866 2.58301 6.30033 2.58301C3.74199 2.58301 1.66699 4.66634 1.66699 7.24134C1.66699 8.23301 1.82533 9.14967 2.10033 9.99967C3.41699 14.1663 7.47533 16.658 9.48366 17.3413C9.76699 17.4413 10.2337 17.4413 10.517 17.3413C12.5253 16.658 16.5837 14.1663 17.9003 9.99967C18.1753 9.14967 18.3337 8.23301 18.3337 7.24134C18.3337 4.66634 16.2587 2.58301 13.7003 2.58301Z" fill="black"/>
+                                              </svg>                    
+                                        </button>
+                                  </figure>
+                                <div class="product-card-content text-center">
+                                  <h3 class="m-0 fs-18 fw-bold">Hikari Betta Bio-Gold Pellets</h3>
+                                  <p class="fs-12 fw-semibold pt-2">Starting from $8.99</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="pt-2 pb-3">
+                        <div class="d-flex align-items-center justify-content-between pb-3">
+                            <h5 class="fw-bold fs-6">Rating</h5>
+                            <button class="see-all-btn-small">See all</button>
+                        </div>
+                        <div class="d-flex gap-3 flex-column">
+                            <div class="rating-card">
+                                <p class="text-white opacity-75">I recently used the MarineShield Pro Life Jacket during a boating trip at Marine Drive, and it exceeded.</p>
+                                <div class="fw-bold fs-12 user-name pb-2">Samantha L.</div>
+                                <div class="d-flex gap-2">
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star text-white opacity-50"></i>
+                                </div>
+                            </div>
+                            <div class="rating-card">
+                                <p class="text-white opacity-75">I recently used the MarineShield Pro Life Jacket during a boating trip at Marine Drive, and it exceeded.</p>
+                                <div class="fw-bold fs-12 user-name pb-2">Samantha L.</div>
+                                <div class="d-flex gap-2">
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star text-white opacity-50"></i>
+                                </div>
+                            </div>
+                            <div class="rating-card">
+                                <p class="text-white opacity-75">I recently used the MarineShield Pro Life Jacket during a boating trip at Marine Drive, and it exceeded.</p>
+                                <div class="fw-bold fs-12 user-name pb-2">Samantha L.</div>
+                                <div class="d-flex gap-2">
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star star-icon-fill"></i>
+                                    <i class="fa-solid fa-star text-white opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2 pb-3">
+                        <div class="d-flex align-items-center justify-content-between pb-3">
+                            <h5 class="fw-bold fs-6">Gallery</h5>
+                            <button class="see-all-btn-small">See all</button>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                            <img class="gallery-img" src="../assets/gallery-img.png" alt="gallery image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                    <img src="../assets/bahri-main-logo.svg" alt="Bahri Logo" class="footer-logo">
+                    <p class="footer-description">
+                        Welcome to Bahri – your gateway to unforgettable marine experiences! At Bahri, we specialize in marine equipment and boat rentals, along with a wide range of services to enhance your time on the water. Whether you're looking to embark on a scenic tour, book a thrilling trip, or find the perfect equipment for your marine adventures, Bahri has you covered!
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands social-icon fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands social-icon fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands social-icon fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands social-icon fa-twitter"></i></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Pages</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5>CONTACT INFO</h5>
+                    <div class="contact-info">
+                        <p>Address:<br>
+                        Budapest Hungry, 1054</p>
+                        <p>Email:<br>
+                        info@leaderfaory.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © 2024 bahri All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
