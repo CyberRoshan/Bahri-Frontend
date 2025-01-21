@@ -9,7 +9,8 @@
     <title>Document</title>
 </head>
 <body>    
-    <div class="hero-section h-screen bg-white">
+    <!-- ! Onboarding 1 Start -->
+    <div class="hero-section h-screen bg-white" id="section1">
         <!-- Decorative shapes -->
         <div class="position-absolute top-0 end-0 ">
             <img src="assets/blue-circle.svg" alt="">
@@ -37,16 +38,158 @@
                         <div class="dot"></div>
                         <div class="dot"></div>
                       </div>
-                      <a href="onboarding2.html">
-                          <button class="right-arw-btn"><img src="assets/arrow-left.svg" alt="next"></button>
-                      </a>
+                          <button class="right-arw-btn next-btn"><img src="assets/arrow-left.svg" alt="next"></button>
                 </div>
                </div>
             </div>
         
        
     </div>
+    <!-- ! Onboarding 1 Start -->
+
+    <!-- ! Onboarding 2 Start -->
+    <div class="hero-section h-screen bg-white" id="section2" style="display: none;">
+        <!-- Decorative shapes -->
+        <div class="position-absolute top-0 end-0 ">
+            <img src="assets/blue-circle.svg" alt="">
+        </div>
+        <div class="shape-bottom-left position-absolute">
+            <img src="assets/yellow-circle.svg" alt="">
+        </div>
+        <div class="position-absolute bottom-0 end-0">
+            <img src="assets/bottom-right-shape.svg" alt="">
+        </div>
+
+       
+            <div class="d-flex">
+               <div class="left-img">
+                <img class="position-relative" src="assets/onboarding2-img.png" alt="">
+               </div>
+               <div class="right-content position-relative py-5 d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <img src="assets/Bahri-logo.svg" alt="Bahri Logo">
+                    <h3 class="fw-medium pt-4 text-black">Seamless <br> <span class="fw-bold">Booking Process</span></h3>
+                    <p class="py-3">Experience a simple and efficient booking process for all our services, designed for your convenience.</p>
+                    <div class="d-flex gap-2 mb-3 justify-content-center pb-4">
+                        <div class="dot"></div>
+                        <div class="active-dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                          <button class="right-arw-btn next-btn2"><img src="assets/arrow-left.svg" alt="next"></button>
+                </div>
+               </div>
+            </div>
+        
+       
+    </div>
+    <!-- ! Onboarding 2 Start -->
+
+    <!-- ! Onboarding 3 Start -->
+    <div class="hero-section h-screen bg-white" id="section3" style="display: none;">
+        <!-- Decorative shapes -->
+        <div class="position-absolute top-0 end-0 ">
+            <img src="assets/blue-circle.svg" alt="">
+        </div>
+        <div class="shape-bottom-left position-absolute">
+            <img src="assets/yellow-circle.svg" alt="">
+        </div>
+        <div class="position-absolute bottom-0 end-0">
+            <img src="assets/bottom-right-shape.svg" alt="">
+        </div>
+
+       
+            <div class="d-flex">
+               <div class="left-img">
+                <img class="position-relative" src="assets/onboarding3-img.png" alt="">
+               </div>
+               <div class="right-content position-relative py-5 d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <img src="assets/Bahri-logo.svg" alt="Bahri Logo">
+                    <h3 class="fw-medium pt-4 text-black">Loyalty <span class="fw-bold">& <br> Rewards</span></h3>
+                    <p class="py-3">Join our rewards program and enjoy exclusive benefits. Earn points with each purchase to unlock discounts and special offers!</p>
+                    <div class="d-flex gap-2 mb-3 justify-content-center pb-4">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="active-dot"></div>
+                        <div class="dot"></div>
+                      </div>
+                          <button class="right-arw-btn next-btn3"><img src="assets/arrow-left.svg" alt="next"></button>
+                </div>
+               </div>
+            </div>
+        
+       
+    </div>
+    <!-- ! Onboarding 3 End -->
+
+    <!-- ! Onboarding 4 Start -->
+    <div class="hero-section h-screen bg-white" id="section4" style="display: none;">
+        <!-- Decorative shapes -->
+        <div class="position-absolute top-0 end-0 ">
+            <img src="assets/blue-circle.svg" alt="">
+        </div>
+        <div class="shape-bottom-left position-absolute">
+            <img src="assets/yellow-circle.svg" alt="">
+        </div>
+        <div class="position-absolute bottom-0 end-0">
+            <img src="assets/bottom-right-shape.svg" alt="">
+        </div>
+
+       
+            <div class="d-flex">
+               <div class="left-img">
+                <img class="position-relative" src="assets/onboarding4-img.png" alt="">
+               </div>
+               <div class="right-content position-relative py-5 d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <img src="assets/Bahri-logo.svg" alt="Bahri Logo">
+                    <h3 class="fw-medium pt-4 text-black">Personalized <br> <span class="fw-bold">Suggestions</span></h3>
+                    <p class="py-3">Receive tailored recommendations based on your preferences to help you find what you love.</p>
+                    <div class="d-flex gap-2 mb-3 justify-content-center pb-4">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="active-dot"></div>
+                      </div>
+                      <a href="login.html">
+                          <button class="right-arw-btn"><img src="assets/arrow-left.svg" alt="next"></button>
+                        </a>
+                </div>
+               </div>
+            </div>
+        
+       
+    </div>
+    <!-- ! Onboarding 4 End -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // On click of the next button, hide current section and show next section with fade effect
+            $(".next-btn").click(function(e) {
+                e.preventDefault(); // Prevent the default anchor click behavior
+                $("#section1").fadeOut(500, function() { // Fade out the first section
+                    $("#section2").fadeIn(500); // Fade in the second section
+                });
+            });
+
+            $(".next-btn2").click(function(e) {
+                e.preventDefault();
+                $("#section2").fadeOut(500, function() {
+                    $("#section3").fadeIn(500);
+                });
+            });
+
+            $(".next-btn3").click(function(e) {
+                e.preventDefault();
+                $("#section3").fadeOut(500, function() {
+                    $("#section4").fadeIn(500);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

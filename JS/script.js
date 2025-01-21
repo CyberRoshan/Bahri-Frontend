@@ -244,42 +244,93 @@ document.getElementById("confirmButton").addEventListener("click", function () {
 
 // ? login.html Start
 // ! OTP Verification Logic Start
-document.addEventListener("DOMContentLoaded", function () {
-  const inputs = document.querySelectorAll(
-    ".verification-input:not(:first-child)"
-  );
+document.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".verification-input:not(.first-input)")
+  const confirmBtn = document.getElementById("confirmBtn")
+  const resendBtn = document.getElementById("resendBtn")
 
+  // Handle input navigation and validation
   inputs.forEach((input, index) => {
-    input.addEventListener("input", function () {
+    input.addEventListener("input", function (e) {
+      // Allow only numbers
+      this.value = this.value.replace(/[^0-9]/g, "")
+
       if (this.value.length === 1) {
+        // Move to next input if available
         if (index < inputs.length - 1) {
-          inputs[index + 1].focus();
+          inputs[index + 1].focus()
         }
       }
-    });
+
+      // Check if all inputs are filled
+      checkInputs()
+    })
 
     input.addEventListener("keydown", function (e) {
       if (e.key === "Backspace" && !this.value) {
+        // Move to previous input if current is empty
         if (index > 0) {
-          inputs[index - 1].focus();
+          inputs[index - 1].focus()
         }
       }
-    });
-  });
+    })
 
-  document.querySelector(".btn-confirm").addEventListener("click", function () {
-    let code = "2"; // First digit is always 2
+    // Prevent paste of non-numeric characters
+    input.addEventListener("paste", (e) => {
+      e.preventDefault()
+      const pastedText = (e.clipboardData || window.clipboardData).getData("text")
+      const numbers = pastedText.match(/\d/g)
+
+      if (numbers) {
+        numbers.forEach((num, i) => {
+          if (index + i < inputs.length) {
+            inputs[index + i].value = num
+            if (index + i < inputs.length - 1) {
+              inputs[index + i + 1].focus()
+            }
+          }
+        })
+      }
+    })
+  })
+
+  // Check if all inputs are filled
+  function checkInputs() {
+    const allFilled = Array.from(inputs).every((input) => input.value.length === 1)
+    confirmBtn.disabled = !allFilled
+  }
+
+  // Handle confirm button click
+  confirmBtn.addEventListener("click", () => {
+    let code = "2" // First digit is always 2
     inputs.forEach((input) => {
-      code += input.value;
-    });
-    console.log("Verification code:", code);
-  });
+      code += input.value
+    })
+    console.log("Verification code:", code)
+    // Add your verification logic here
+  })
 
-  document.querySelector(".resend-text").addEventListener("click", function () {
-    console.log("Resending verification code...");
+  // Handle resend button click
+  resendBtn.addEventListener("click", () => {
+    console.log("Resending verification code...")
     // Add your resend logic here
-  });
-});
+
+    // Clear all inputs except the first one
+    inputs.forEach((input) => {
+      input.value = ""
+    })
+    inputs[0].focus()
+    confirmBtn.disabled = true
+  })
+
+  // Focus first input when modal opens
+  const verificationModal = document.getElementById("verificationModal")
+  verificationModal.addEventListener("shown.bs.modal", () => {
+    inputs[0].focus()
+  })
+})
+
+
 // ! OTP Verification Logic End
 // ? login.html End
 

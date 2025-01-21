@@ -318,6 +318,10 @@
   .fav-btn-85{
     flex-basis: 100%;
   }
+  .verification-input {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 991px) {

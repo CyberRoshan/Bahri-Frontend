@@ -157,7 +157,7 @@
   background-color: var(--light-shade);
   border: none;
   border-radius: 17px;
-  width: 95px;
+  width: 48%;
   height: 54px;
   display: flex;
   align-items: center;
@@ -2140,4 +2140,57 @@ input[type="checkbox"]:checked::after {
 }
 .carousel-inner {
   transition: transform 0.5s ease-in-out;
+}
+
+.verification-text {
+  color: #333;
+  margin: 20px 0 30px;
+  line-height: 1.6;
+}
+
+.verification-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.verification-input {
+  width: 70px;
+  min-height: 10vh;
+  height: 80px;
+  border-radius: 17px;
+  border: none;
+  background-color: #e8f0fe;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bolder;
+  color: black;
+}
+
+.verification-input:focus {
+  outline: none;
+  background-color: var(--primary-orange);
+  font-weight: bolder;
+  color: black;
+  box-shadow: 0 0 0 2px var(--primary-orange);
+}
+
+.first-input {
+  background-color: #ffa500;
+  color: white;
+  font-weight: bold;
+}
+
+.iti__flag-container {
+  border: none;
+  background-color: transparent;
+}
+
+.iti__selected-flag {
+  border: none;
+}
+.phone-input {
+  width: 100% !important; /* Ensure it overrides any other conflicting styles */
+  box-sizing: border-box; /* Includes padding and borders in the width calculation */
 }
