@@ -2190,3 +2190,41 @@ input[type="checkbox"]:checked::after {
   width: 245px !important;
   height: 155px !important;
 }
+.fs-15{
+  font-size: 15px;
+}
+.country-img{
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 95, 140, 0.2);
+}
+.blank-tick{
+  background-color: var(--light-shade);
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.lang-box{
+  min-height: 100%;
+}
+.intl-tel-input {
+  width: 100%;
+}
+.phone-input {
+  width: 360px !important;
+}
+.iti__country-list {
+  width: 450px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  background-color: var(--light-shade);
+  border: 1px solid var(--primary-blue);
+}
+.iti__country{
+  font-size: 12px;
+}
