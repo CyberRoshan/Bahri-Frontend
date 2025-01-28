@@ -368,3 +368,5 @@ function toggle(index) {
 }
 // ! Toggle Button End
 // ? booking-history.html End
+
+// ! Some JS is in Script.js
